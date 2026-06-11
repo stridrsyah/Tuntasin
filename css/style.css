@@ -1,0 +1,112 @@
+/* ===========================
+   Tuntasin - Main Stylesheet
+   =========================== */
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.glass-panel {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.dark .glass-panel {
+    background: rgba(30, 41, 59, 0.7);
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, #004ac6 0%, #712ae2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-gradient {
+    background: radial-gradient(circle at 50% 50%, rgba(37, 99, 235, 0.05) 0%, transparent 70%);
+}
+
+.step-line::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 100%;
+    height: 2px;
+    background: #e2e8f0;
+    z-index: -1;
+}
+
+@media (max-width: 768px) {
+    .step-line::after {
+        display: none;
+    }
+}
+
+.card-hover-effect {
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+}
+
+.card-hover-effect:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+.animate-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+}
+
+.reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.testimonial-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Mobile responsive improvements */
+@media (max-width: 640px) {
+    .hero-gradient {
+        min-height: auto;
+        padding-top: 2rem;
+        padding-bottom: 4rem;
+    }
+
+    section {
+        overflow-x: hidden;
+    }
+}
+
+/* Mobile menu animation */
+#mobile-menu {
+    animation: slideDown 0.2s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===========================
+   Brand: Tuntasin Logo Colors
+   =========================== */
+.brand-tunta {
+    color: #1a2e5e;
+    /* biru tua / dongker */
+}
+
+.brand-sin {
+    color: #712ae2;
+    /* ungu */
+}
