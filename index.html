@@ -676,20 +676,20 @@
                                     class="w-full p-3 rounded-xl border border-outline bg-surface-bright focus:ring-2 focus:ring-primary focus:border-primary transition-all"
                                     id="task-type">
                                     <optgroup label="Tugas Akademik Tertulis">
-                                        <option value="2000">Makalah / Artikel (per halaman)</option>
-                                        <option value="2500">Laporan PKL / Magang (per halaman)</option>
-                                        <option value="1500">Proposal Penelitian (per halaman)</option>
-                                        <option value="3000">Resume Jurnal (per halaman)</option>
+                                        <option value="15000">Makalah / Artikel (per halaman)</option>
+                                        <option value="20000">Laporan PKL / Magang (per halaman)</option>
+                                        <option value="20000">Proposal Penelitian (per halaman)</option>
+                                        <option value="12000">Resume Jurnal (per halaman)</option>
                                     </optgroup>
                                     <optgroup label="Desain & Visual">
-                                        <option value="2000">Slide PPT (per slide)</option>
-                                        <option value="5000">Poster / Desain Grafis Ringan (per desain)</option>
+                                        <option value="8000">Slide PPT (per slide)</option>
+                                        <option value="80000">Poster / Desain Grafis (per desain)</option>
+                                        <option value="80000">Infografis (per desain)</option>
                                     </optgroup>
                                     <optgroup label="Karir & Profil">
-                                        <option value="10000">CV ATS (per dokumen)</option>
-                                        <option value="10000">CV Kreatif (per dokumen)</option>
-                                        <option value="10000">Surat Lamaran Kerja (per surat)</option>
-                                        <option value="50000">Portofolio Custom(per dokumen)</option>
+                                        <option value="60000">CV ATS (per dokumen)</option>
+                                        <option value="40000">Surat Lamaran Kerja (per surat)</option>
+                                        <option value="75000">Portofolio Akademik (per dokumen)</option>
                                     </optgroup>
                                 </select>
                             </div>
@@ -713,18 +713,18 @@
 
                             <!-- Price breakdown -->
                             <div class="bg-surface-container-low rounded-xl p-lg space-y-sm">
-                                <div class="flex justify-between text-body-sm text-on-surface-variant">
+                                <div class="flex justify-between items-center text-body-sm text-on-surface-variant">
                                     <span>Harga satuan</span>
-                                    <span id="unit-price">Rp 15.000</span>
+                                    <span class="font-semibold" id="unit-price">Rp 15.000</span>
                                 </div>
-                                <div class="flex justify-between text-body-sm text-on-surface-variant">
+                                <div class="flex justify-between items-center text-body-sm text-on-surface-variant">
                                     <span>Jumlah</span>
-                                    <span id="qty-display">× 1</span>
+                                    <span class="font-semibold" id="qty-display">× 1</span>
                                 </div>
-                                <div class="border-t border-outline-variant/30 pt-sm flex justify-between items-end">
-                                    <span class="font-bold text-on-surface">Estimasi Total</span>
-                                    <span class="text-headline-md font-headline-md text-primary" id="total-price">Rp
-                                        15.000</span>
+                                <div class="border-t border-outline-variant/30 pt-md mt-sm">
+                                    <p class="text-sm font-bold text-on-surface-variant mb-1">Estimasi Total</p>
+                                    <p class="text-headline-md font-headline-md text-primary leading-tight"
+                                        id="total-price">Rp 15.000</p>
                                 </div>
                             </div>
 
@@ -859,11 +859,13 @@
                     <p class="text-body-lg font-body-lg mb-2xl relative z-10 opacity-90 max-w-2xl mx-auto">Jangan
                         biarkan tugas menghambat aktivitasmu. Konsultasikan deadline-mu hari ini dan dapatkan hasil
                         terbaik.</p>
-                    <a href="https://wa.me/6287718547040?text=Halo%20Tuntasin%2C%20saya%20ingin%20memesan%20jasa%20pengerjaan%20tugas%20sekarang"
-                        target="_blank"
-                        class="relative z-10 bg-white text-primary px-3xl py-5 rounded-2xl font-extrabold text-lg hover:scale-105 active:scale-95 transition-all shadow-xl inline-flex items-center justify-center gap-2 mx-auto">
-                        <span class="material-symbols-outlined">chat</span> Chat WhatsApp Sekarang
-                    </a>
+                    <div class="relative z-10 flex justify-center">
+                        <a href="https://wa.me/6287718547040?text=Halo%20Tuntasin%2C%20saya%20ingin%20memesan%20jasa%20pengerjaan%20tugas%20sekarang"
+                            target="_blank"
+                            class="bg-white text-primary px-3xl py-5 rounded-2xl font-extrabold text-lg hover:scale-105 active:scale-95 transition-all shadow-xl inline-flex items-center justify-center gap-2">
+                            <span class="material-symbols-outlined">chat</span> Chat WhatsApp Sekarang
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -1205,7 +1207,8 @@
                             <span class="material-symbols-outlined transition-transform">expand_more</span>
                         </button>
                         <div class="faq-content h-0 overflow-hidden px-lg transition-all duration-300">
-                            <p class="pb-lg text-on-surface-variant text-body-sm">Kami menerima transfer bank BCA, dompet digital (GoPay, OVO, Dana, ShopeePay), dan QRIS. Konfirmasi
+                            <p class="pb-lg text-on-surface-variant text-body-sm">Kami menerima transfer bank (BCA, BRI,
+                                Mandiri, BNI), dompet digital (GoPay, OVO, Dana, ShopeePay), dan QRIS. Konfirmasi
                                 pembayaran langsung via WhatsApp ya.</p>
                         </div>
                     </div>
@@ -1237,6 +1240,18 @@
                             website siap pakai</strong> — bukan jasa deploy. Kamu terima file lengkap, bebas modifikasi
                         sendiri atau pakai jasa hosting pihak manapun. Cocok untuk yang ingin hemat biaya & punya
                         kendali penuh atas websitenya.</p>
+                </div>
+                <!-- Note Box -->
+                <div class="bg-primary/5 border border-primary/20 rounded-2xl p-lg mb-2xl flex items-start gap-md">
+                    <span class="material-symbols-outlined text-primary mt-0.5 flex-shrink-0"
+                        style="font-variation-settings: 'FILL' 1">info</span>
+                    <div>
+                        <p class="font-bold text-on-surface mb-1">Yang kamu dapat:</p>
+                        <p class="text-body-sm text-on-surface-variant">File HTML/CSS/JS lengkap (atau framework sesuai
+                            paket) yang siap diupload ke hosting manapun seperti Netlify, Vercel, GitHub Pages,
+                            Hostinger, Niagahoster, dll. <strong>Tidak termasuk domain & hosting</strong> — kami bantu
+                            arahkan jika butuh rekomendasi.</p>
+                    </div>
                 </div>
 
                 <!-- Pricing Cards -->
@@ -1392,6 +1407,29 @@
                             <span class="material-symbols-outlined text-sm">chat</span> Konsultasi & Tanya Harga
                         </a>
                     </div>
+                </div>
+
+                <!-- Info Bar -->
+                <div
+                    class="bg-surface-container-high rounded-2xl p-xl flex flex-col md:flex-row items-center justify-between gap-lg">
+                    <div class="flex items-center gap-md text-center md:text-left">
+                        <div
+                            class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center text-white flex-shrink-0">
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1">code</span>
+                        </div>
+                        <div>
+                            <p class="font-bold text-on-surface">Kamu dapat file, bukan janji deploy</p>
+                            <p class="text-body-sm text-on-surface-variant">Source code dikirim via WhatsApp/Google
+                                Drive setelah lunas. Upload ke hosting sendiri — atau tanya kami rekomendasi hosting
+                                gratisnya!</p>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/6287718547040?text=Halo%20Tuntasin%2C%20saya%20mau%20tanya%20source%20code%20website"
+                        target="_blank"
+                        class="flex-shrink-0 flex items-center gap-2 bg-primary text-on-primary px-xl py-3 rounded-full font-semibold hover:opacity-90 transition-all whitespace-nowrap">
+                        <span class="material-symbols-outlined text-sm">chat</span> Tanya Dulu Gratis
+                    </a>
                 </div>
             </div>
         </section>

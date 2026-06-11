@@ -138,3 +138,13 @@ footer .brand-tunta {
     color: #7eb3ff;
     /* biru cerah agar kontras di background gelap */
 }
+
+.cta-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: min(100%, 380px);
+    margin: 0 auto;
+    padding: 18px 24px;
+    text-align: center;
+}
