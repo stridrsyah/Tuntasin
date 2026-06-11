@@ -33,35 +33,80 @@ document.addEventListener('click', (e) => {
 });
 
 
-// Price Calculator Logic
+// ===========================
+//  Price Calculator Logic
+//  - No education level multiplier
+//  - +/- quantity buttons
+//  - Dynamic unit label
+//  - Price breakdown display
+// ===========================
 const taskTypeSelect = document.getElementById('task-type');
-const eduBtns = document.querySelectorAll('.edu-btn');
 const pageInput = document.getElementById('page-count');
 const totalPriceEl = document.getElementById('total-price');
-let currentMultiplier = 1.0;
+const unitPriceEl = document.getElementById('unit-price');
+const qtyDisplayEl = document.getElementById('qty-display');
+const unitLabelEl = document.getElementById('unit-label');
+const qtyMinusBtn = document.getElementById('qty-minus');
+const qtyPlusBtn = document.getElementById('qty-plus');
+
+// Unit label mapping based on option groups / values
+const unitLabels = {
+    '2000': 'Jumlah Halaman',
+    '2500': 'Jumlah Halaman',
+    '1500': 'Jumlah Halaman',
+    '2000': 'Jumlah Slide',
+    '5000': 'Jumlah Desain',
+    '10000': 'Jumlah Dokumen',
+    '10000': 'Jumlah Surat',
+    '50000': 'Jumlah Dokumen',
+};
+
+function formatRupiah(amount) {
+    return 'Rp ' + amount.toLocaleString('id-ID');
+}
 
 function updatePrice() {
     const basePrice = parseInt(taskTypeSelect.value);
-    const pages = Math.max(1, parseInt(pageInput.value) || 1);
-    const total = basePrice * currentMultiplier * pages;
-    totalPriceEl.textContent = 'Rp ' + total.toLocaleString('id-ID');
+    const qty = Math.max(1, parseInt(pageInput.value) || 1);
+    const total = basePrice * qty;
+
+    totalPriceEl.textContent = formatRupiah(total);
+    unitPriceEl.textContent = formatRupiah(basePrice);
+    qtyDisplayEl.textContent = '× ' + qty;
+
+    // Update unit label
+    if (unitLabels[String(basePrice)]) {
+        unitLabelEl.textContent = unitLabels[String(basePrice)];
+    } else {
+        unitLabelEl.textContent = 'Jumlah Unit';
+    }
 }
 
-eduBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-        eduBtns.forEach(b => {
-            b.classList.remove('bg-primary', 'text-white', 'active');
-            b.classList.add('hover:bg-surface-container');
-        });
-        btn.classList.add('bg-primary', 'text-white', 'active');
-        btn.classList.remove('hover:bg-surface-container');
-        currentMultiplier = parseFloat(btn.dataset.multiplier);
+// +/- buttons
+qtyMinusBtn.addEventListener('click', () => {
+    const current = parseInt(pageInput.value) || 1;
+    if (current > 1) {
+        pageInput.value = current - 1;
         updatePrice();
-    });
+    }
 });
 
-taskTypeSelect.addEventListener('change', updatePrice);
+qtyPlusBtn.addEventListener('click', () => {
+    const current = parseInt(pageInput.value) || 1;
+    pageInput.value = current + 1;
+    updatePrice();
+});
+
+taskTypeSelect.addEventListener('change', () => {
+    pageInput.value = 1;
+    updatePrice();
+});
+
 pageInput.addEventListener('input', updatePrice);
+
+// Init
+updatePrice();
+
 
 // Stats Animation
 const observerOptions = { threshold: 0.1 };
@@ -136,10 +181,6 @@ scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior:
 
 // ===========================
 //  Auto-play Testimonial Slider
-//  - Putar otomatis setiap 4 detik
-//  - Pause saat hover
-//  - Dot indicator sinkron
-//  - CSS transition untuk smooth loop
 // ===========================
 (function () {
     const track = document.querySelector('.testimonial-track');
@@ -153,7 +194,6 @@ scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior:
     let currentIndex = 0;
     let autoTimer = null;
 
-    // --- Buat dot indicators ---
     function buildDots() {
         if (!dotsWrapper) return;
         dotsWrapper.innerHTML = '';
@@ -179,8 +219,13 @@ scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior:
     function goTo(idx) {
         const steps = total - visible() + 1;
         currentIndex = (idx + steps) % steps;
-        const move = currentIndex * (100 / visible());
-        track.style.transform = `translateX(-${move}%)`;
+        // Kalkulasi offset memperhitungkan gap (24px = gap-xl)
+        const cardGap = 24;
+        const cardWidth = isMobile()
+            ? track.parentElement.offsetWidth
+            : (track.parentElement.offsetWidth - cardGap * 2) / 3;
+        const offset = currentIndex * (cardWidth + cardGap);
+        track.style.transform = `translateX(-${offset}px)`;
         updateDots();
     }
 
@@ -191,18 +236,16 @@ scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior:
 
     function startAuto() {
         clearInterval(autoTimer);
-        autoTimer = setInterval(next, 4000);
+        autoTimer = setInterval(next, 2800);
     }
 
     function stopAuto() {
         clearInterval(autoTimer);
     }
 
-    // Pause on hover
     track.parentElement.addEventListener('mouseenter', stopAuto);
     track.parentElement.addEventListener('mouseleave', startAuto);
 
-    // Touch swipe support
     let touchStartX = 0;
     track.addEventListener('touchstart', e => {
         touchStartX = e.changedTouches[0].clientX;
@@ -214,13 +257,12 @@ scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior:
         startAuto();
     }, { passive: true });
 
-    // Rebuild on resize
     window.addEventListener('resize', () => {
         buildDots();
+        currentIndex = 0;
         goTo(0);
     });
 
-    // Init
     buildDots();
     goTo(0);
     startAuto();
