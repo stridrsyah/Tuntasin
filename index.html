@@ -671,27 +671,98 @@
                         <h4 class="font-bold text-on-surface mb-xl text-headline-sm">Kalkulator Estimasi</h4>
                         <div class="space-y-xl">
                             <div>
-                                <label class="block text-sm font-bold mb-2">Jenis Tugas</label>
-                                <select
-                                    class="w-full p-3 rounded-xl border border-outline bg-surface-bright focus:ring-2 focus:ring-primary focus:border-primary transition-all"
-                                    id="task-type">
-                                    <optgroup label="Tugas Akademik Tertulis">
-                                        <option value="15000">Makalah / Artikel (per halaman)</option>
-                                        <option value="20000">Laporan PKL / Magang (per halaman)</option>
-                                        <option value="20000">Proposal Penelitian (per halaman)</option>
-                                        <option value="12000">Resume Jurnal (per halaman)</option>
-                                    </optgroup>
-                                    <optgroup label="Desain & Visual">
-                                        <option value="8000">Slide PPT (per slide)</option>
-                                        <option value="80000">Poster / Desain Grafis (per desain)</option>
-                                        <option value="80000">Infografis (per desain)</option>
-                                    </optgroup>
-                                    <optgroup label="Karir & Profil">
-                                        <option value="60000">CV ATS (per dokumen)</option>
-                                        <option value="40000">Surat Lamaran Kerja (per surat)</option>
-                                        <option value="75000">Portofolio Akademik (per dokumen)</option>
-                                    </optgroup>
-                                </select>
+                                <label class="block text-sm font-bold mb-3">Jenis Tugas</label>
+                                <div id="task-type-selector" class="space-y-md">
+                                    <!-- Group: Tugas Akademik Tertulis -->
+                                    <div>
+                                        <p
+                                            class="text-xs font-bold text-primary uppercase tracking-widest mb-2 flex items-center gap-1">
+                                            <span class="material-symbols-outlined text-sm">menu_book</span> Tugas
+                                            Akademik Tertulis
+                                        </p>
+                                        <div class="flex flex-wrap gap-2" role="group">
+                                            <button type="button" data-value="15000" data-unit="halaman"
+                                                class="task-chip selected flex items-center gap-1.5 px-3 py-2 rounded-xl border-2 border-primary bg-primary text-white text-xs font-bold transition-all duration-200 hover:opacity-90 active:scale-95">
+                                                <span class="material-symbols-outlined text-sm">description</span>
+                                                Makalah / Artikel
+                                                <span class="opacity-70 font-normal">/hal</span>
+                                            </button>
+                                            <button type="button" data-value="20000" data-unit="halaman"
+                                                class="task-chip flex items-center gap-1.5 px-3 py-2 rounded-xl border-2 border-outline-variant bg-surface text-on-surface-variant text-xs font-bold transition-all duration-200 hover:border-primary hover:text-primary active:scale-95">
+                                                <span class="material-symbols-outlined text-sm">business_center</span>
+                                                Laporan PKL
+                                                <span class="opacity-70 font-normal">/hal</span>
+                                            </button>
+                                            <button type="button" data-value="20000" data-unit="halaman"
+                                                class="task-chip flex items-center gap-1.5 px-3 py-2 rounded-xl border-2 border-outline-variant bg-surface text-on-surface-variant text-xs font-bold transition-all duration-200 hover:border-primary hover:text-primary active:scale-95">
+                                                <span class="material-symbols-outlined text-sm">article</span> Proposal
+                                                Penelitian
+                                                <span class="opacity-70 font-normal">/hal</span>
+                                            </button>
+                                            <button type="button" data-value="12000" data-unit="halaman"
+                                                class="task-chip flex items-center gap-1.5 px-3 py-2 rounded-xl border-2 border-outline-variant bg-surface text-on-surface-variant text-xs font-bold transition-all duration-200 hover:border-primary hover:text-primary active:scale-95">
+                                                <span class="material-symbols-outlined text-sm">book</span> Resume
+                                                Jurnal
+                                                <span class="opacity-70 font-normal">/hal</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- Group: Desain & Visual -->
+                                    <div>
+                                        <p
+                                            class="text-xs font-bold text-primary uppercase tracking-widest mb-2 flex items-center gap-1">
+                                            <span class="material-symbols-outlined text-sm">palette</span> Desain &
+                                            Visual
+                                        </p>
+                                        <div class="flex flex-wrap gap-2" role="group">
+                                            <button type="button" data-value="8000" data-unit="slide"
+                                                class="task-chip flex items-center gap-1.5 px-3 py-2 rounded-xl border-2 border-outline-variant bg-surface text-on-surface-variant text-xs font-bold transition-all duration-200 hover:border-primary hover:text-primary active:scale-95">
+                                                <span class="material-symbols-outlined text-sm">slideshow</span> Slide
+                                                PPT
+                                                <span class="opacity-70 font-normal">/slide</span>
+                                            </button>
+                                            <button type="button" data-value="80000" data-unit="desain"
+                                                class="task-chip flex items-center gap-1.5 px-3 py-2 rounded-xl border-2 border-outline-variant bg-surface text-on-surface-variant text-xs font-bold transition-all duration-200 hover:border-primary hover:text-primary active:scale-95">
+                                                <span class="material-symbols-outlined text-sm">palette</span> Poster /
+                                                Desain Grafis
+                                                <span class="opacity-70 font-normal">/desain</span>
+                                            </button>
+                                            <button type="button" data-value="80000" data-unit="desain"
+                                                class="task-chip flex items-center gap-1.5 px-3 py-2 rounded-xl border-2 border-outline-variant bg-surface text-on-surface-variant text-xs font-bold transition-all duration-200 hover:border-primary hover:text-primary active:scale-95">
+                                                <span class="material-symbols-outlined text-sm">bar_chart</span>
+                                                Infografis
+                                                <span class="opacity-70 font-normal">/desain</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- Group: Karir & Profil -->
+                                    <div>
+                                        <p
+                                            class="text-xs font-bold text-primary uppercase tracking-widest mb-2 flex items-center gap-1">
+                                            <span class="material-symbols-outlined text-sm">work</span> Karir & Profil
+                                        </p>
+                                        <div class="flex flex-wrap gap-2" role="group">
+                                            <button type="button" data-value="60000" data-unit="dokumen"
+                                                class="task-chip flex items-center gap-1.5 px-3 py-2 rounded-xl border-2 border-outline-variant bg-surface text-on-surface-variant text-xs font-bold transition-all duration-200 hover:border-primary hover:text-primary active:scale-95">
+                                                <span class="material-symbols-outlined text-sm">badge</span> CV ATS
+                                                <span class="opacity-70 font-normal">/dok</span>
+                                            </button>
+                                            <button type="button" data-value="40000" data-unit="surat"
+                                                class="task-chip flex items-center gap-1.5 px-3 py-2 rounded-xl border-2 border-outline-variant bg-surface text-on-surface-variant text-xs font-bold transition-all duration-200 hover:border-primary hover:text-primary active:scale-95">
+                                                <span class="material-symbols-outlined text-sm">mail</span> Surat
+                                                Lamaran Kerja
+                                                <span class="opacity-70 font-normal">/surat</span>
+                                            </button>
+                                            <button type="button" data-value="75000" data-unit="dokumen"
+                                                class="task-chip flex items-center gap-1.5 px-3 py-2 rounded-xl border-2 border-outline-variant bg-surface text-on-surface-variant text-xs font-bold transition-all duration-200 hover:border-primary hover:text-primary active:scale-95">
+                                                <span class="material-symbols-outlined text-sm">folder_special</span>
+                                                Portofolio Akademik
+                                                <span class="opacity-70 font-normal">/dok</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="hidden" id="task-type" value="15000">
                             </div>
                             <div>
                                 <label class="block text-sm font-bold mb-2" id="unit-label">Jumlah Halaman /

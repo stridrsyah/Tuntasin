@@ -35,12 +35,12 @@ document.addEventListener('click', (e) => {
 
 // ===========================
 //  Price Calculator Logic
-//  - No education level multiplier
+//  - Chip selector (replaces <select>)
 //  - +/- quantity buttons
 //  - Dynamic unit label
 //  - Price breakdown display
 // ===========================
-const taskTypeSelect = document.getElementById('task-type');
+const taskTypeInput = document.getElementById('task-type');
 const pageInput = document.getElementById('page-count');
 const totalPriceEl = document.getElementById('total-price');
 const unitPriceEl = document.getElementById('unit-price');
@@ -49,16 +49,13 @@ const unitLabelEl = document.getElementById('unit-label');
 const qtyMinusBtn = document.getElementById('qty-minus');
 const qtyPlusBtn = document.getElementById('qty-plus');
 
-// Unit label mapping based on option groups / values
-const unitLabels = {
-    '2000': 'Jumlah Halaman',
-    '2500': 'Jumlah Halaman',
-    '1500': 'Jumlah Halaman',
-    '2000': 'Jumlah Slide',
-    '5000': 'Jumlah Desain',
-    '10000': 'Jumlah Dokumen',
-    '10000': 'Jumlah Surat',
-    '50000': 'Jumlah Dokumen',
+// Unit label mapping
+const unitLabelMap = {
+    'halaman': 'Jumlah Halaman',
+    'slide': 'Jumlah Slide',
+    'desain': 'Jumlah Desain',
+    'dokumen': 'Jumlah Dokumen',
+    'surat': 'Jumlah Surat',
 };
 
 function formatRupiah(amount) {
@@ -66,20 +63,41 @@ function formatRupiah(amount) {
 }
 
 function updatePrice() {
-    const basePrice = parseInt(taskTypeSelect.value);
+    const basePrice = parseInt(taskTypeInput.value) || 15000;
     const qty = Math.max(1, parseInt(pageInput.value) || 1);
     const total = basePrice * qty;
 
     totalPriceEl.textContent = formatRupiah(total);
     unitPriceEl.textContent = formatRupiah(basePrice);
     qtyDisplayEl.textContent = '× ' + qty;
+}
 
-    // Update unit label
-    if (unitLabels[String(basePrice)]) {
-        unitLabelEl.textContent = unitLabels[String(basePrice)];
-    } else {
-        unitLabelEl.textContent = 'Jumlah Unit';
-    }
+// Chip selector logic
+function initChipSelector() {
+    const chips = document.querySelectorAll('.task-chip');
+    chips.forEach(chip => {
+        chip.addEventListener('click', () => {
+            // Deselect all
+            chips.forEach(c => {
+                c.classList.remove('selected', 'border-primary', 'bg-primary', 'text-white');
+                c.classList.add('border-outline-variant', 'bg-surface', 'text-on-surface-variant');
+            });
+            // Select clicked
+            chip.classList.add('selected', 'border-primary', 'bg-primary', 'text-white');
+            chip.classList.remove('border-outline-variant', 'bg-surface', 'text-on-surface-variant');
+
+            // Update hidden input
+            taskTypeInput.value = chip.dataset.value;
+
+            // Update unit label
+            const unit = chip.dataset.unit || 'unit';
+            unitLabelEl.textContent = unitLabelMap[unit] || 'Jumlah Unit';
+
+            // Reset qty
+            pageInput.value = 1;
+            updatePrice();
+        });
+    });
 }
 
 // +/- buttons
@@ -97,14 +115,10 @@ qtyPlusBtn.addEventListener('click', () => {
     updatePrice();
 });
 
-taskTypeSelect.addEventListener('change', () => {
-    pageInput.value = 1;
-    updatePrice();
-});
-
 pageInput.addEventListener('input', updatePrice);
 
 // Init
+initChipSelector();
 updatePrice();
 
 
@@ -219,7 +233,6 @@ scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior:
     function goTo(idx) {
         const steps = total - visible() + 1;
         currentIndex = (idx + steps) % steps;
-        // Kalkulasi offset memperhitungkan gap (24px = gap-xl)
         const cardGap = 24;
         const cardWidth = isMobile()
             ? track.parentElement.offsetWidth
