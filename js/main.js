@@ -72,53 +72,79 @@ function updatePrice() {
     qtyDisplayEl.textContent = '× ' + qty;
 }
 
-// Chip selector logic
-function initChipSelector() {
-    const chips = document.querySelectorAll('.task-chip');
-    chips.forEach(chip => {
-        chip.addEventListener('click', () => {
-            // Deselect all
-            chips.forEach(c => {
-                c.classList.remove('selected', 'border-primary', 'bg-primary', 'text-white');
-                c.classList.add('border-outline-variant', 'bg-surface', 'text-on-surface-variant');
-            });
-            // Select clicked
-            chip.classList.add('selected', 'border-primary', 'bg-primary', 'text-white');
-            chip.classList.remove('border-outline-variant', 'bg-surface', 'text-on-surface-variant');
+// ===========================
+//  Custom Dropdown Selector
+// ===========================
+function initDropdown() {
+    const trigger = document.getElementById('dropdown-trigger');
+    const panel = document.getElementById('dropdown-panel');
+    const arrow = document.getElementById('dropdown-arrow');
+    const selectedIcon = document.getElementById('dropdown-selected-icon');
+    const selectedLabel = document.getElementById('dropdown-selected-label');
+    if (!trigger || !panel) return;
 
+    function openDropdown() {
+        panel.classList.remove('hidden');
+        arrow.style.transform = 'rotate(180deg)';
+        trigger.classList.add('border-primary');
+        trigger.classList.remove('border-outline-variant');
+    }
+
+    function closeDropdown() {
+        panel.classList.add('hidden');
+        arrow.style.transform = 'rotate(0deg)';
+        trigger.classList.remove('border-primary');
+        trigger.classList.add('border-outline-variant');
+    }
+
+    trigger.addEventListener('click', (e) => {
+        e.stopPropagation();
+        panel.classList.contains('hidden') ? openDropdown() : closeDropdown();
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!document.getElementById('dropdown-wrapper').contains(e.target)) {
+            closeDropdown();
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeDropdown();
+    });
+
+    document.querySelectorAll('.dropdown-option').forEach(option => {
+        option.addEventListener('click', () => {
             // Update hidden input
-            taskTypeInput.value = chip.dataset.value;
+            taskTypeInput.value = option.dataset.value;
+
+            // Update display
+            selectedIcon.textContent = option.dataset.icon;
+            selectedLabel.textContent = option.dataset.label;
 
             // Update unit label
-            const unit = chip.dataset.unit || 'unit';
+            const unit = option.dataset.unit || 'unit';
             unitLabelEl.textContent = unitLabelMap[unit] || 'Jumlah Unit';
 
-            // Reset qty
+            // Highlight selected row
+            document.querySelectorAll('.dropdown-option').forEach(o => {
+                o.classList.remove('bg-primary/10', 'text-primary');
+            });
+            option.classList.add('bg-primary/10', 'text-primary');
+
+            // Reset qty & update price
             pageInput.value = 1;
             updatePrice();
+
+            closeDropdown();
         });
     });
+
+    // Set first option as active on load
+    const first = document.querySelector('.dropdown-option');
+    if (first) first.classList.add('bg-primary/10', 'text-primary');
 }
 
-// +/- buttons
-qtyMinusBtn.addEventListener('click', () => {
-    const current = parseInt(pageInput.value) || 1;
-    if (current > 1) {
-        pageInput.value = current - 1;
-        updatePrice();
-    }
-});
-
-qtyPlusBtn.addEventListener('click', () => {
-    const current = parseInt(pageInput.value) || 1;
-    pageInput.value = current + 1;
-    updatePrice();
-});
-
-pageInput.addEventListener('input', updatePrice);
-
-// Init
-initChipSelector();
+initDropdown();
 updatePrice();
 
 

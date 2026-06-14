@@ -672,92 +672,159 @@
                         <div class="space-y-xl">
                             <div>
                                 <label class="block text-sm font-bold mb-3">Jenis Tugas</label>
-                                <div id="task-type-selector" class="space-y-md">
-                                    <!-- Group: Tugas Akademik Tertulis -->
-                                    <div>
-                                        <p
-                                            class="text-xs font-bold text-primary uppercase tracking-widest mb-2 flex items-center gap-1">
-                                            <span class="material-symbols-outlined text-sm">menu_book</span> Tugas
-                                            Akademik Tertulis
-                                        </p>
-                                        <div class="flex flex-wrap gap-2" role="group">
-                                            <button type="button" data-value="15000" data-unit="halaman"
-                                                class="task-chip selected flex items-center gap-1.5 px-3 py-2 rounded-xl border-2 border-primary bg-primary text-white text-xs font-bold transition-all duration-200 hover:opacity-90 active:scale-95">
-                                                <span class="material-symbols-outlined text-sm">description</span>
-                                                Makalah / Artikel
-                                                <span class="opacity-70 font-normal">/hal</span>
+                                <!-- Custom Dropdown -->
+                                <div class="relative" id="dropdown-wrapper">
+                                    <button type="button" id="dropdown-trigger"
+                                        class="w-full flex items-center justify-between gap-3 px-4 py-3.5 rounded-xl border-2 border-outline-variant bg-surface text-on-surface font-semibold text-sm hover:border-primary focus:border-primary focus:outline-none transition-all duration-200">
+                                        <div class="flex items-center gap-2.5" id="dropdown-selected-display">
+                                            <span class="material-symbols-outlined text-primary text-base"
+                                                id="dropdown-selected-icon">description</span>
+                                            <span id="dropdown-selected-label">Makalah / Artikel</span>
+                                        </div>
+                                        <span
+                                            class="material-symbols-outlined text-on-surface-variant transition-transform duration-200"
+                                            id="dropdown-arrow">expand_more</span>
+                                    </button>
+
+                                    <!-- Dropdown Panel -->
+                                    <div id="dropdown-panel"
+                                        class="hidden absolute left-0 right-0 top-full mt-2 bg-white border border-outline-variant/50 rounded-2xl shadow-2xl z-50 overflow-hidden"
+                                        style="max-height: 320px; overflow-y: auto;">
+
+                                        <!-- Group: Tugas Akademik Tertulis -->
+                                        <div class="px-3 pt-3 pb-1">
+                                            <p
+                                                class="text-xs font-bold text-primary uppercase tracking-widest flex items-center gap-1 mb-1.5">
+                                                <span class="material-symbols-outlined text-sm">menu_book</span> Tugas
+                                                Akademik Tertulis
+                                            </p>
+                                        </div>
+                                        <div class="px-2 pb-2 space-y-0.5">
+                                            <button type="button"
+                                                class="dropdown-option w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold text-on-surface hover:bg-primary/8 hover:text-primary transition-all duration-150 text-left"
+                                                data-value="15000" data-unit="halaman" data-icon="description"
+                                                data-label="Makalah / Artikel">
+                                                <span
+                                                    class="material-symbols-outlined text-primary text-base flex-shrink-0">description</span>
+                                                <span class="flex-1">Makalah / Artikel</span>
+                                                <span class="text-xs font-normal text-on-surface-variant">per
+                                                    halaman</span>
                                             </button>
-                                            <button type="button" data-value="20000" data-unit="halaman"
-                                                class="task-chip flex items-center gap-1.5 px-3 py-2 rounded-xl border-2 border-outline-variant bg-surface text-on-surface-variant text-xs font-bold transition-all duration-200 hover:border-primary hover:text-primary active:scale-95">
-                                                <span class="material-symbols-outlined text-sm">business_center</span>
-                                                Laporan PKL
-                                                <span class="opacity-70 font-normal">/hal</span>
+                                            <button type="button"
+                                                class="dropdown-option w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold text-on-surface hover:bg-primary/8 hover:text-primary transition-all duration-150 text-left"
+                                                data-value="20000" data-unit="halaman" data-icon="business_center"
+                                                data-label="Laporan PKL">
+                                                <span
+                                                    class="material-symbols-outlined text-primary text-base flex-shrink-0">business_center</span>
+                                                <span class="flex-1">Laporan PKL</span>
+                                                <span class="text-xs font-normal text-on-surface-variant">per
+                                                    halaman</span>
                                             </button>
-                                            <button type="button" data-value="20000" data-unit="halaman"
-                                                class="task-chip flex items-center gap-1.5 px-3 py-2 rounded-xl border-2 border-outline-variant bg-surface text-on-surface-variant text-xs font-bold transition-all duration-200 hover:border-primary hover:text-primary active:scale-95">
-                                                <span class="material-symbols-outlined text-sm">article</span> Proposal
-                                                Penelitian
-                                                <span class="opacity-70 font-normal">/hal</span>
+                                            <button type="button"
+                                                class="dropdown-option w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold text-on-surface hover:bg-primary/8 hover:text-primary transition-all duration-150 text-left"
+                                                data-value="20000" data-unit="halaman" data-icon="article"
+                                                data-label="Proposal Penelitian">
+                                                <span
+                                                    class="material-symbols-outlined text-primary text-base flex-shrink-0">article</span>
+                                                <span class="flex-1">Proposal Penelitian</span>
+                                                <span class="text-xs font-normal text-on-surface-variant">per
+                                                    halaman</span>
                                             </button>
-                                            <button type="button" data-value="12000" data-unit="halaman"
-                                                class="task-chip flex items-center gap-1.5 px-3 py-2 rounded-xl border-2 border-outline-variant bg-surface text-on-surface-variant text-xs font-bold transition-all duration-200 hover:border-primary hover:text-primary active:scale-95">
-                                                <span class="material-symbols-outlined text-sm">book</span> Resume
-                                                Jurnal
-                                                <span class="opacity-70 font-normal">/hal</span>
+                                            <button type="button"
+                                                class="dropdown-option w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold text-on-surface hover:bg-primary/8 hover:text-primary transition-all duration-150 text-left"
+                                                data-value="12000" data-unit="halaman" data-icon="book"
+                                                data-label="Resume Jurnal">
+                                                <span
+                                                    class="material-symbols-outlined text-primary text-base flex-shrink-0">book</span>
+                                                <span class="flex-1">Resume Jurnal</span>
+                                                <span class="text-xs font-normal text-on-surface-variant">per
+                                                    halaman</span>
                                             </button>
                                         </div>
-                                    </div>
-                                    <!-- Group: Desain & Visual -->
-                                    <div>
-                                        <p
-                                            class="text-xs font-bold text-primary uppercase tracking-widest mb-2 flex items-center gap-1">
-                                            <span class="material-symbols-outlined text-sm">palette</span> Desain &
-                                            Visual
-                                        </p>
-                                        <div class="flex flex-wrap gap-2" role="group">
-                                            <button type="button" data-value="8000" data-unit="slide"
-                                                class="task-chip flex items-center gap-1.5 px-3 py-2 rounded-xl border-2 border-outline-variant bg-surface text-on-surface-variant text-xs font-bold transition-all duration-200 hover:border-primary hover:text-primary active:scale-95">
-                                                <span class="material-symbols-outlined text-sm">slideshow</span> Slide
-                                                PPT
-                                                <span class="opacity-70 font-normal">/slide</span>
+
+                                        <div class="mx-3 border-t border-outline-variant/30"></div>
+
+                                        <!-- Group: Desain & Visual -->
+                                        <div class="px-3 pt-3 pb-1">
+                                            <p
+                                                class="text-xs font-bold text-primary uppercase tracking-widest flex items-center gap-1 mb-1.5">
+                                                <span class="material-symbols-outlined text-sm">palette</span> Desain &
+                                                Visual
+                                            </p>
+                                        </div>
+                                        <div class="px-2 pb-2 space-y-0.5">
+                                            <button type="button"
+                                                class="dropdown-option w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold text-on-surface hover:bg-primary/8 hover:text-primary transition-all duration-150 text-left"
+                                                data-value="8000" data-unit="slide" data-icon="slideshow"
+                                                data-label="Slide PPT">
+                                                <span
+                                                    class="material-symbols-outlined text-primary text-base flex-shrink-0">slideshow</span>
+                                                <span class="flex-1">Slide PPT</span>
+                                                <span class="text-xs font-normal text-on-surface-variant">per
+                                                    slide</span>
                                             </button>
-                                            <button type="button" data-value="80000" data-unit="desain"
-                                                class="task-chip flex items-center gap-1.5 px-3 py-2 rounded-xl border-2 border-outline-variant bg-surface text-on-surface-variant text-xs font-bold transition-all duration-200 hover:border-primary hover:text-primary active:scale-95">
-                                                <span class="material-symbols-outlined text-sm">palette</span> Poster /
-                                                Desain Grafis
-                                                <span class="opacity-70 font-normal">/desain</span>
+                                            <button type="button"
+                                                class="dropdown-option w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold text-on-surface hover:bg-primary/8 hover:text-primary transition-all duration-150 text-left"
+                                                data-value="80000" data-unit="desain" data-icon="palette"
+                                                data-label="Poster / Desain Grafis">
+                                                <span
+                                                    class="material-symbols-outlined text-primary text-base flex-shrink-0">palette</span>
+                                                <span class="flex-1">Poster / Desain Grafis</span>
+                                                <span class="text-xs font-normal text-on-surface-variant">per
+                                                    desain</span>
                                             </button>
-                                            <button type="button" data-value="80000" data-unit="desain"
-                                                class="task-chip flex items-center gap-1.5 px-3 py-2 rounded-xl border-2 border-outline-variant bg-surface text-on-surface-variant text-xs font-bold transition-all duration-200 hover:border-primary hover:text-primary active:scale-95">
-                                                <span class="material-symbols-outlined text-sm">bar_chart</span>
-                                                Infografis
-                                                <span class="opacity-70 font-normal">/desain</span>
+                                            <button type="button"
+                                                class="dropdown-option w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold text-on-surface hover:bg-primary/8 hover:text-primary transition-all duration-150 text-left"
+                                                data-value="80000" data-unit="desain" data-icon="bar_chart"
+                                                data-label="Infografis">
+                                                <span
+                                                    class="material-symbols-outlined text-primary text-base flex-shrink-0">bar_chart</span>
+                                                <span class="flex-1">Infografis</span>
+                                                <span class="text-xs font-normal text-on-surface-variant">per
+                                                    desain</span>
                                             </button>
                                         </div>
-                                    </div>
-                                    <!-- Group: Karir & Profil -->
-                                    <div>
-                                        <p
-                                            class="text-xs font-bold text-primary uppercase tracking-widest mb-2 flex items-center gap-1">
-                                            <span class="material-symbols-outlined text-sm">work</span> Karir & Profil
-                                        </p>
-                                        <div class="flex flex-wrap gap-2" role="group">
-                                            <button type="button" data-value="60000" data-unit="dokumen"
-                                                class="task-chip flex items-center gap-1.5 px-3 py-2 rounded-xl border-2 border-outline-variant bg-surface text-on-surface-variant text-xs font-bold transition-all duration-200 hover:border-primary hover:text-primary active:scale-95">
-                                                <span class="material-symbols-outlined text-sm">badge</span> CV ATS
-                                                <span class="opacity-70 font-normal">/dok</span>
+
+                                        <div class="mx-3 border-t border-outline-variant/30"></div>
+
+                                        <!-- Group: Karir & Profil -->
+                                        <div class="px-3 pt-3 pb-1">
+                                            <p
+                                                class="text-xs font-bold text-primary uppercase tracking-widest flex items-center gap-1 mb-1.5">
+                                                <span class="material-symbols-outlined text-sm">work</span> Karir &
+                                                Profil
+                                            </p>
+                                        </div>
+                                        <div class="px-2 pb-3 space-y-0.5">
+                                            <button type="button"
+                                                class="dropdown-option w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold text-on-surface hover:bg-primary/8 hover:text-primary transition-all duration-150 text-left"
+                                                data-value="60000" data-unit="dokumen" data-icon="badge"
+                                                data-label="CV ATS">
+                                                <span
+                                                    class="material-symbols-outlined text-primary text-base flex-shrink-0">badge</span>
+                                                <span class="flex-1">CV ATS</span>
+                                                <span class="text-xs font-normal text-on-surface-variant">per
+                                                    dokumen</span>
                                             </button>
-                                            <button type="button" data-value="40000" data-unit="surat"
-                                                class="task-chip flex items-center gap-1.5 px-3 py-2 rounded-xl border-2 border-outline-variant bg-surface text-on-surface-variant text-xs font-bold transition-all duration-200 hover:border-primary hover:text-primary active:scale-95">
-                                                <span class="material-symbols-outlined text-sm">mail</span> Surat
-                                                Lamaran Kerja
-                                                <span class="opacity-70 font-normal">/surat</span>
+                                            <button type="button"
+                                                class="dropdown-option w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold text-on-surface hover:bg-primary/8 hover:text-primary transition-all duration-150 text-left"
+                                                data-value="40000" data-unit="surat" data-icon="mail"
+                                                data-label="Surat Lamaran Kerja">
+                                                <span
+                                                    class="material-symbols-outlined text-primary text-base flex-shrink-0">mail</span>
+                                                <span class="flex-1">Surat Lamaran Kerja</span>
+                                                <span class="text-xs font-normal text-on-surface-variant">per
+                                                    surat</span>
                                             </button>
-                                            <button type="button" data-value="75000" data-unit="dokumen"
-                                                class="task-chip flex items-center gap-1.5 px-3 py-2 rounded-xl border-2 border-outline-variant bg-surface text-on-surface-variant text-xs font-bold transition-all duration-200 hover:border-primary hover:text-primary active:scale-95">
-                                                <span class="material-symbols-outlined text-sm">folder_special</span>
-                                                Portofolio Akademik
-                                                <span class="opacity-70 font-normal">/dok</span>
+                                            <button type="button"
+                                                class="dropdown-option w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold text-on-surface hover:bg-primary/8 hover:text-primary transition-all duration-150 text-left"
+                                                data-value="75000" data-unit="dokumen" data-icon="folder_special"
+                                                data-label="Portofolio Akademik">
+                                                <span
+                                                    class="material-symbols-outlined text-primary text-base flex-shrink-0">folder_special</span>
+                                                <span class="flex-1">Portofolio Akademik</span>
+                                                <span class="text-xs font-normal text-on-surface-variant">per
+                                                    dokumen</span>
                                             </button>
                                         </div>
                                     </div>
