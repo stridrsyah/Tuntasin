@@ -97,7 +97,7 @@ function formatRupiah(amount) {
 }
 
 function updatePrice() {
-    const basePrice = parseInt(taskTypeInput.value) || 15000;
+    const basePrice = parseInt(taskTypeInput.value) || 3000;
     const qty = Math.max(1, parseInt(pageInput.value) || 1);
     const total = basePrice * qty;
 
