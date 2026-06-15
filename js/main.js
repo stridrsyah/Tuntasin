@@ -35,10 +35,6 @@ document.addEventListener('click', (e) => {
 
 // ===========================
 //  Price Calculator Logic
-//  - Chip selector (replaces <select>)
-//  - +/- quantity buttons
-//  - Dynamic unit label
-//  - Price breakdown display
 // ===========================
 const taskTypeInput = document.getElementById('task-type');
 const pageInput = document.getElementById('page-count');
@@ -48,6 +44,7 @@ const qtyDisplayEl = document.getElementById('qty-display');
 const unitLabelEl = document.getElementById('unit-label');
 const qtyMinusBtn = document.getElementById('qty-minus');
 const qtyPlusBtn = document.getElementById('qty-plus');
+const waOrderBtn = document.getElementById('wa-order-btn');
 
 // Unit label mapping
 const unitLabelMap = {
@@ -57,6 +54,43 @@ const unitLabelMap = {
     'dokumen': 'Jumlah Dokumen',
     'surat': 'Jumlah Surat',
 };
+
+// WhatsApp message templates per layanan
+const waTemplates = {
+    'Makalah / Artikel': (qty, total) =>
+        `Halo Tuntasin, saya ingin memesan *Jasa Pembuatan Makalah / Artikel*. Berikut detail kebutuhan saya:\n\n📜 *Jenis Tugas:* Makalah / Artikel\n📌 *Topik/Judul:* [isi di sini]\n📄 *Jumlah Halaman:* ${qty} halaman\n💰 *Estimasi Harga:* ${total}\n⏰ *Deadline:* [isi di sini]\n📝 *Catatan Tambahan:* [isi jika ada]\n\nTerima kasih!`,
+
+    'Laporan PKL': (qty, total) =>
+        `Halo Tuntasin, saya ingin memesan *Jasa Pembuatan Laporan PKL*. Berikut detail kebutuhan saya:\n\n📜 *Jenis Tugas:* Laporan PKL\n🏢 *Nama Instansi/Perusahaan:* [isi di sini]\n📄 *Jumlah Halaman:* ${qty} halaman\n💰 *Estimasi Harga:* ${total}\n⏰ *Deadline:* [isi di sini]\n📝 *Catatan Tambahan:* [isi jika ada]\n\nTerima kasih!`,
+
+    'Proposal Penelitian': (qty, total) =>
+        `Halo Tuntasin, saya ingin memesan *Jasa Pembuatan Proposal Penelitian*. Berikut detail kebutuhan saya:\n\n📜 *Jenis Tugas:* Proposal Penelitian\n📌 *Topik/Judul:* [isi di sini]\n📄 *Jumlah Halaman:* ${qty} halaman\n💰 *Estimasi Harga:* ${total}\n⏰ *Deadline:* [isi di sini]\n📝 *Catatan Tambahan:* [isi jika ada]\n\nTerima kasih!`,
+
+    'Resume Jurnal': (qty, total) =>
+        `Halo Tuntasin, saya ingin memesan *Jasa Pembuatan Resume Jurnal*. Berikut detail kebutuhan saya:\n\n📜 *Jenis Tugas:* Resume Jurnal\n📖 *Judul/Link Jurnal:* [isi di sini]\n📄 *Jumlah Halaman:* ${qty} halaman\n💰 *Estimasi Harga:* ${total}\n⏰ *Deadline:* [isi di sini]\n📝 *Catatan Tambahan:* [isi jika ada]\n\nTerima kasih!`,
+
+    'Slide PPT': (qty, total) =>
+        `Halo Tuntasin, saya ingin memesan *Jasa Pembuatan Slide PPT*. Berikut detail kebutuhan saya:\n\n📜 *Jenis Tugas:* Slide PPT\n📌 *Topik/Judul:* [isi di sini]\n📊 *Jumlah Slide:* ${qty} slide\n💰 *Estimasi Harga:* ${total}\n⏰ *Deadline:* [isi di sini]\n📝 *Catatan Tambahan:* [isi jika ada]\n\nTerima kasih!`,
+
+    'Poster / Desain Grafis': (qty, total) =>
+        `Halo Tuntasin, saya ingin memesan *Jasa Pembuatan Poster / Desain Grafis*. Berikut detail kebutuhan saya:\n\n📜 *Jenis Tugas:* Poster / Desain Grafis\n🎨 *Tema/Konten:* [isi di sini]\n📐 *Ukuran/Format:* [isi di sini]\n🔢 *Jumlah Desain:* ${qty}\n💰 *Estimasi Harga:* ${total}\n⏰ *Deadline:* [isi di sini]\n📝 *Catatan Tambahan:* [isi jika ada]\n\nTerima kasih!`,
+
+    'Infografis': (qty, total) =>
+        `Halo Tuntasin, saya ingin memesan *Jasa Pembuatan Infografis*. Berikut detail kebutuhan saya:\n\n📜 *Jenis Tugas:* Infografis\n🎨 *Tema/Konten:* [isi di sini]\n📐 *Ukuran/Format:* [isi di sini]\n🔢 *Jumlah Desain:* ${qty}\n💰 *Estimasi Harga:* ${total}\n⏰ *Deadline:* [isi di sini]\n📝 *Catatan Tambahan:* [isi jika ada]\n\nTerima kasih!`,
+
+    'CV ATS': (qty, total) =>
+        `Halo Tuntasin, saya ingin memesan *Jasa Pembuatan CV ATS*. Berikut detail kebutuhan saya:\n\n📜 *Jenis Tugas:* CV ATS\n🎓 *Posisi/Bidang Pekerjaan:* [isi di sini]\n🏫 *Pendidikan Terakhir:* [isi di sini]\n💰 *Estimasi Harga:* ${total}\n⏰ *Deadline:* [isi di sini]\n📝 *Catatan Tambahan:* [isi jika ada]\n\nTerima kasih!`,
+
+    'Surat Lamaran Kerja': (qty, total) =>
+        `Halo Tuntasin, saya ingin memesan *Jasa Pembuatan Surat Lamaran Kerja*. Berikut detail kebutuhan saya:\n\n📜 *Jenis Tugas:* Surat Lamaran Kerja\n🎓 *Posisi yang Dilamar:* [isi di sini]\n🏢 *Nama Perusahaan:* [isi di sini]\n💰 *Estimasi Harga:* ${total}\n⏰ *Deadline:* [isi di sini]\n📝 *Catatan Tambahan:* [isi jika ada]\n\nTerima kasih!`,
+
+    'Portofolio Akademik': (qty, total) =>
+        `Halo Tuntasin, saya ingin memesan *Jasa Pembuatan Portofolio Akademik*. Berikut detail kebutuhan saya:\n\n📜 *Jenis Tugas:* Portofolio Akademik\n🎓 *Bidang/Jurusan:* [isi di sini]\n💰 *Estimasi Harga:* ${total}\n⏰ *Deadline:* [isi di sini]\n📝 *Catatan Tambahan:* [isi jika ada]\n\nTerima kasih!`,
+};
+
+// State untuk layanan yang sedang dipilih
+let selectedLabel = 'Makalah / Artikel';
+let selectedUnit = 'halaman';
 
 function formatRupiah(amount) {
     return 'Rp ' + amount.toLocaleString('id-ID');
@@ -70,7 +104,43 @@ function updatePrice() {
     totalPriceEl.textContent = formatRupiah(total);
     unitPriceEl.textContent = formatRupiah(basePrice);
     qtyDisplayEl.textContent = '× ' + qty;
+
+    // Update tombol WhatsApp dengan template yang sesuai
+    updateWALink(qty, formatRupiah(total));
 }
+
+function updateWALink(qty, totalStr) {
+    if (!waOrderBtn) return;
+    const templateFn = waTemplates[selectedLabel];
+    const message = templateFn
+        ? templateFn(qty, totalStr)
+        : `Halo Tuntasin, saya ingin memesan *${selectedLabel}*.\n\n💰 *Estimasi Harga:* ${totalStr}\n\nTerima kasih!`;
+    waOrderBtn.href = 'https://wa.me/6287718547040?text=' + encodeURIComponent(message);
+}
+
+// Tombol +/-
+qtyMinusBtn.addEventListener('click', () => {
+    const current = parseInt(pageInput.value) || 1;
+    if (current > 1) {
+        pageInput.value = current - 1;
+        updatePrice();
+    }
+});
+
+qtyPlusBtn.addEventListener('click', () => {
+    const current = parseInt(pageInput.value) || 1;
+    pageInput.value = current + 1;
+    updatePrice();
+});
+
+pageInput.addEventListener('input', () => {
+    // Pastikan tidak kurang dari 1
+    if (parseInt(pageInput.value) < 1 || pageInput.value === '') {
+        pageInput.value = 1;
+    }
+    updatePrice();
+});
+
 
 // ===========================
 //  Custom Dropdown Selector
@@ -79,8 +149,8 @@ function initDropdown() {
     const trigger = document.getElementById('dropdown-trigger');
     const panel = document.getElementById('dropdown-panel');
     const arrow = document.getElementById('dropdown-arrow');
-    const selectedIcon = document.getElementById('dropdown-selected-icon');
-    const selectedLabel = document.getElementById('dropdown-selected-label');
+    const selIcon = document.getElementById('dropdown-selected-icon');
+    const selLabel = document.getElementById('dropdown-selected-label');
     if (!trigger || !panel) return;
 
     function openDropdown() {
@@ -103,9 +173,8 @@ function initDropdown() {
     });
 
     document.addEventListener('click', (e) => {
-        if (!document.getElementById('dropdown-wrapper').contains(e.target)) {
-            closeDropdown();
-        }
+        const wrapper = document.getElementById('dropdown-wrapper');
+        if (wrapper && !wrapper.contains(e.target)) closeDropdown();
     });
 
     document.addEventListener('keydown', (e) => {
@@ -114,24 +183,27 @@ function initDropdown() {
 
     document.querySelectorAll('.dropdown-option').forEach(option => {
         option.addEventListener('click', () => {
-            // Update hidden input
+            // Update state
             taskTypeInput.value = option.dataset.value;
+            selectedLabel = option.dataset.label;
+            selectedUnit = option.dataset.unit || 'unit';
 
-            // Update display
-            selectedIcon.textContent = option.dataset.icon;
-            selectedLabel.textContent = option.dataset.label;
+            // Update trigger display
+            selIcon.textContent = option.dataset.icon;
+            selLabel.textContent = option.dataset.label;
 
             // Update unit label
-            const unit = option.dataset.unit || 'unit';
-            unitLabelEl.textContent = unitLabelMap[unit] || 'Jumlah Unit';
+            unitLabelEl.textContent = unitLabelMap[selectedUnit] || 'Jumlah Unit';
 
-            // Highlight selected row
+            // Highlight baris terpilih
             document.querySelectorAll('.dropdown-option').forEach(o => {
                 o.classList.remove('bg-primary/10', 'text-primary');
+                o.querySelector('.option-check').classList.add('hidden');
             });
             option.classList.add('bg-primary/10', 'text-primary');
+            option.querySelector('.option-check').classList.remove('hidden');
 
-            // Reset qty & update price
+            // Reset qty dan hitung ulang
             pageInput.value = 1;
             updatePrice();
 
@@ -139,11 +211,15 @@ function initDropdown() {
         });
     });
 
-    // Set first option as active on load
-    const first = document.querySelector('.dropdown-option');
-    if (first) first.classList.add('bg-primary/10', 'text-primary');
+    // Set opsi pertama sebagai aktif saat load
+    const firstOption = document.querySelector('.dropdown-option');
+    if (firstOption) {
+        firstOption.classList.add('bg-primary/10', 'text-primary');
+        firstOption.querySelector('.option-check').classList.remove('hidden');
+    }
 }
 
+// Init semua kalkulator
 initDropdown();
 updatePrice();
 
@@ -278,9 +354,7 @@ scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior:
         autoTimer = setInterval(next, 2800);
     }
 
-    function stopAuto() {
-        clearInterval(autoTimer);
-    }
+    function stopAuto() { clearInterval(autoTimer); }
 
     track.parentElement.addEventListener('mouseenter', stopAuto);
     track.parentElement.addEventListener('mouseleave', startAuto);
