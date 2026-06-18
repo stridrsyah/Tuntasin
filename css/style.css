@@ -133,12 +133,6 @@
     /* ungu */
 }
 
-/* Di footer (bg gelap): hanya tunta yang dicerahkan, sin tetap asli */
-footer .brand-tunta {
-    color: #7eb3ff;
-    /* biru cerah agar kontras di background gelap */
-}
-
 .cta-button {
     display: flex;
     align-items: center;
