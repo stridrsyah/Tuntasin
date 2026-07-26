@@ -290,7 +290,7 @@ const serviceDetails = {
         price: 'Mulai Rp 157rb',
         desc: 'Website portofolio online untuk menampilkan karya, CV, dan profil profesional kamu secara digital.',
         requirements: ['Isi/konten yang ingin ditampilkan (karya, CV, profil, dll)', 'Jumlah halaman website yang diinginkan', 'Preferensi warna/tema (jika ada)', 'Foto/logo pendukung (jika ada)', 'Deadline pengumpulan'],
-        deliverables: ['Website portofolio online dan bisa diakses siapa saja', 'Desain personal branding yang menarik', 'Tampilan responsif di HP & laptop', 'Panduan singkat cara mengelola/update konten'],
+        deliverables: ['Website portofolio online dan bisa diakses siapa saja', 'Desain personal branding yang menarik', 'Tampilan responsif di HP & laptop', 'Panduan singkat cara mengelola/update konten', 'Revisi hingga 2x'],
         wa: 'https://wa.me/628211474025?text=Halo%20Tuntasin%2C%20saya%20ingin%20konsultasi%20/%20memesan%20jasa%20Website%20Portofolio.%20Terimakasih.'
     }
 };
