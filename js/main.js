@@ -201,7 +201,7 @@ const serviceDetails = {
         desc: 'Penyusunan makalah sistematis dengan standar akademik tinggi, bebas plagiarisme, siap kumpul.',
         requirements: ['Topik atau judul makalah (boleh masih kasar/belum fix)', 'Jumlah halaman & format penulisan yang diminta (misal APA/MLA)', 'Referensi wajib jika ada (jurnal, buku, dsb)', 'Deadline pengumpulan'],
         deliverables: ['File makalah lengkap (Word & PDF)', 'Struktur akademik rapi: cover, BAB, daftar pustaka', 'Bebas plagiarisme dengan cek similarity', 'Gratis 1x revisi minor'],
-        wa: 'https://wa.me/628211474025?text=Halo%20Tuntasin%2C%20saya%20ingin%20memesan%20%2AJasa%20Pembuatan%20Makalah%2A.%20Berikut%20detail%20kebutuhan%20saya%3A%0A%0A%F0%9F%93%9C%20%2AJenis%20Tugas%3A%2A%20Makalah%20/%20Artikel%0A%0ATerima%20kasih%21'
+        wa: 'https://wa.me/628211474025?text=Halo%20Tuntasin%2C%20saya%20ingin%20konsultasi%20/%20memesan%20jasa%20Makalah%20/%20Artikel.%20Terimakasih.'
     },
     'laporan-pkl': {
         icon: 'business_center',
@@ -210,7 +210,7 @@ const serviceDetails = {
         desc: 'Dokumentasi praktik kerja profesional, terstruktur rapi, dan bergaransi revisi.',
         requirements: ['Nama instansi/perusahaan tempat PKL', 'Data & catatan kegiatan selama praktik kerja', 'Jumlah halaman yang diminta kampus/sekolah', 'Format laporan dari institusi (jika ada template)', 'Deadline pengumpulan'],
         deliverables: ['File laporan PKL lengkap (Word & PDF)', 'Analisis data & pembahasan kegiatan kerja', 'Layout profesional sesuai standar institusi', 'Gratis revisi jika ada bagian yang tidak sesuai'],
-        wa: 'https://wa.me/628211474025?text=Halo%20Tuntasin%2C%20saya%20ingin%20memesan%20%2AJasa%20Pembuatan%20Laporan%20PKL%2A.%20Berikut%20detail%20kebutuhan%20saya%3A%0A%0A%F0%9F%93%9C%20%2AJenis%20Tugas%3A%2A%20Laporan%20PKL%0A%0ATerima%20kasih%21'
+        wa: 'https://wa.me/628211474025?text=Halo%20Tuntasin%2C%20saya%20ingin%20konsultasi%20/%20memesan%20jasa%20Laporan%20PKL.%20Terimakasih.'
     },
     'proposal': {
         icon: 'article',
@@ -219,7 +219,7 @@ const serviceDetails = {
         desc: 'Penyusunan proposal penelitian yang persuasif, logis, dan sesuai kaidah ilmiah.',
         requirements: ['Topik atau judul penelitian', 'Jumlah halaman yang diminta', 'Metodologi penelitian yang diinginkan (jika sudah punya arah)', 'Referensi wajib jika ada', 'Deadline pengumpulan'],
         deliverables: ['File proposal lengkap (Word & PDF)', 'Desain metodologi penelitian yang logis', 'Tinjauan pustaka relevan dan terkini', 'Gratis 1x revisi minor'],
-        wa: 'https://wa.me/628211474025?text=Halo%20Tuntasin%2C%20saya%20ingin%20memesan%20%2AJasa%20Pembuatan%20Proposal%20Penelitian%2A.%20Berikut%20detail%20kebutuhan%20saya%3A%0A%0A%F0%9F%93%9C%20%2AJenis%20Tugas%3A%2A%20Proposal%20Penelitian%0A%0ATerima%20kasih%21'
+        wa: 'https://wa.me/628211474025?text=Halo%20Tuntasin%2C%20saya%20ingin%20konsultasi%20/%20memesan%20jasa%20Proposal%20Penelitian.%20Terimakasih.'
     },
     'resume-jurnal': {
         icon: 'book',
@@ -228,7 +228,7 @@ const serviceDetails = {
         desc: 'Ringkasan poin-poin penting dari jurnal ilmiah nasional maupun internasional.',
         requirements: ['Judul atau link jurnal yang akan diringkas', 'Jumlah halaman ringkasan yang diinginkan', 'Format resume (jika ada ketentuan khusus)', 'Deadline pengumpulan'],
         deliverables: ['File resume jurnal (Word & PDF)', 'Analisis kritis terhadap isi jurnal', 'Ringkasan padat & mudah dipahami', 'Gratis 1x revisi minor'],
-        wa: 'https://wa.me/628211474025?text=Halo%20Tuntasin%2C%20saya%20ingin%20memesan%20%2AJasa%20Pembuatan%20Resume%20Jurnal%2A.%20Berikut%20detail%20kebutuhan%20saya%3A%0A%0A%F0%9F%93%9C%20%2AJenis%20Tugas%3A%2A%20Resume%20Jurnal%0A%0ATerima%20kasih%21'
+        wa: 'https://wa.me/628211474025?text=Halo%20Tuntasin%2C%20saya%20ingin%20konsultasi%20/%20memesan%20jasa%20Resume%20Jurnal.%20Terimakasih.'
     },
     'ppt': {
         icon: 'slideshow',
@@ -237,7 +237,7 @@ const serviceDetails = {
         desc: 'Visualisasi ide yang memukau dan mudah dipahami untuk presentasi akademik.',
         requirements: ['Topik atau judul presentasi', 'Jumlah slide yang diinginkan', 'Isi materi/poin penting yang wajib ada', 'Referensi desain/tema (jika ada preferensi)', 'Deadline pengumpulan'],
         deliverables: ['File PPT siap presentasi (PPTX & PDF)', 'Desain modern & profesional', 'Catatan presenter di setiap slide', 'Gratis 1x revisi minor'],
-        wa: 'https://wa.me/628211474025?text=Halo%20Tuntasin%2C%20saya%20ingin%20memesan%20%2AJasa%20Pembuatan%20Slide%20PPT%20/%20Presentasi%2A.%20Berikut%20detail%20kebutuhan%20saya%3A%0A%0A%F0%9F%93%9C%20%2AJenis%20Tugas%3A%2A%20Slide%20PPT%20/%20Presentasi%0A%0ATerima%20kasih%21'
+        wa: 'https://wa.me/628211474025?text=Halo%20Tuntasin%2C%20saya%20ingin%20konsultasi%20/%20memesan%20jasa%20Slide%20PPT%20/%20Presentasi.%20Terimakasih.'
     },
     'poster': {
         icon: 'palette',
@@ -246,7 +246,7 @@ const serviceDetails = {
         desc: 'Desain poster kreatif dan menarik untuk keperluan lomba atau publikasi ilmiah.',
         requirements: ['Tema atau konten yang ingin ditampilkan', 'Ukuran & format file yang dibutuhkan (A3, A4, digital, dll)', 'Logo/instansi terkait (jika perlu ditampilkan)', 'Referensi gaya desain (jika ada)', 'Deadline pengumpulan'],
         deliverables: ['File poster resolusi tinggi (JPG/PNG/PDF)', 'Desain siap cetak maupun digital', 'Layout menarik & sesuai tema', 'Gratis 1x revisi minor'],
-        wa: 'https://wa.me/628211474025?text=Halo%20Tuntasin%2C%20saya%20ingin%20memesan%20%2AJasa%20Pembuatan%20Poster%20/%20Desain%20Grafis%2A.%20Berikut%20detail%20kebutuhan%20saya%3A%0A%0A%F0%9F%93%9C%20%2AJenis%20Tugas%3A%2A%20Poster%20/%20Desain%20Grafis%0A%0ATerima%20kasih%21'
+        wa: 'https://wa.me/628211474025?text=Halo%20Tuntasin%2C%20saya%20ingin%20konsultasi%20/%20memesan%20jasa%20Poster%20/%20Desain%20Grafis.%20Terimakasih.'
     },
     'infografis': {
         icon: 'bar_chart',
@@ -255,7 +255,7 @@ const serviceDetails = {
         desc: 'Menyederhanakan data atau ide kompleks jadi visual yang ringkas dan mudah dicerna.',
         requirements: ['Topik atau data yang ingin divisualkan', 'Ukuran & format file yang dibutuhkan', 'Data mentah/statistik (jika ada)', 'Referensi gaya desain (jika ada)', 'Deadline pengumpulan'],
         deliverables: ['File infografis resolusi tinggi (JPG/PNG/PDF)', 'Data tersaji terstruktur & mudah dipahami', 'Desain menarik dan informatif', 'Gratis 1x revisi minor'],
-        wa: 'https://wa.me/628211474025?text=Halo%20Tuntasin%2C%20saya%20ingin%20memesan%20%2AJasa%20Pembuatan%20Infografis%2A.%20Berikut%20detail%20kebutuhan%20saya%3A%0A%0A%F0%9F%93%9C%20%2AJenis%20Tugas%3A%2A%20Infografis%0A%0ATerima%20kasih%21'
+        wa: 'https://wa.me/628211474025?text=Halo%20Tuntasin%2C%20saya%20ingin%20konsultasi%20/%20memesan%20jasa%20Infografis.%20Terimakasih.'
     },
     'cv-ats': {
         icon: 'badge',
@@ -264,7 +264,7 @@ const serviceDetails = {
         desc: 'CV yang dioptimalkan agar lolos sistem seleksi otomatis (ATS) perusahaan.',
         requirements: ['Posisi/bidang pekerjaan yang dituju', 'Riwayat pendidikan terakhir', 'Pengalaman kerja/organisasi (jika ada)', 'Skill & sertifikasi relevan', 'Deadline pengumpulan'],
         deliverables: ['File CV format ATS-friendly (Word & PDF)', 'Kata kunci dioptimalkan sesuai bidang', 'Struktur rapi & mudah dibaca sistem/HRD', 'Gratis 1x revisi minor'],
-        wa: 'https://wa.me/628211474025?text=Halo%20Tuntasin%2C%20saya%20ingin%20memesan%20%2AJasa%20Pembuatan%20CV%20ATS%2A.%20Berikut%20detail%20kebutuhan%20saya%3A%0A%0A%F0%9F%93%9C%20%2AJenis%20Tugas%3A%2A%20CV%20ATS%0A%0ATerima%20kasih%21'
+        wa: 'https://wa.me/628211474025?text=Halo%20Tuntasin%2C%20saya%20ingin%20konsultasi%20/%20memesan%20jasa%20CV%20ATS.%20Terimakasih.'
     },
     'surat-lamaran': {
         icon: 'mail',
@@ -273,7 +273,7 @@ const serviceDetails = {
         desc: 'Penulisan cover letter persuasif yang menonjolkan value diri di mata HR.',
         requirements: ['Posisi yang dilamar', 'Nama perusahaan tujuan', 'CV atau ringkasan pengalaman (agar isi surat relevan)', 'Deadline pengumpulan'],
         deliverables: ['File surat lamaran (Word & PDF)', 'Gaya bahasa persuasif dan profesional', 'Disesuaikan dengan posisi & perusahaan tujuan', 'Gratis 1x revisi minor'],
-        wa: 'https://wa.me/628211474025?text=Halo%20Tuntasin%2C%20saya%20ingin%20memesan%20%2AJasa%20Pembuatan%20Surat%20Lamaran%20Kerja%2A.%20Berikut%20detail%20kebutuhan%20saya%3A%0A%0A%F0%9F%93%9C%20%2AJenis%20Tugas%3A%2A%20Surat%20Lamaran%20Kerja%0A%0ATerima%20kasih%21'
+        wa: 'https://wa.me/628211474025?text=Halo%20Tuntasin%2C%20saya%20ingin%20konsultasi%20/%20memesan%20jasa%20Surat%20Lamaran%20Kerja.%20Terimakasih.'
     },
     'portofolio-akademik': {
         icon: 'folder_special',
@@ -282,7 +282,7 @@ const serviceDetails = {
         desc: 'Kumpulan karya dan pencapaian akademik disusun rapi dan siap dipresentasikan.',
         requirements: ['Cakupan isi portofolio (karya/prestasi apa saja)', 'Jumlah halaman yang diinginkan', 'File karya/dokumen pendukung yang ingin ditampilkan', 'Deadline pengumpulan'],
         deliverables: ['File portofolio lengkap (Word/PDF)', 'Desain profesional & rapi', 'Siap dipresentasikan ke dosen/perusahaan', 'Gratis 1x revisi minor'],
-        wa: 'https://wa.me/628211474025?text=Halo%20Tuntasin%2C%20saya%20ingin%20memesan%20%2AJasa%20Pembuatan%20Portofolio%20Akademik%2A.%20Berikut%20detail%20kebutuhan%20saya%3A%0A%0A%F0%9F%93%9C%20%2AJenis%20Tugas%3A%2A%20Portofolio%20Akademik%0A%0ATerima%20kasih%21'
+        wa: 'https://wa.me/628211474025?text=Halo%20Tuntasin%2C%20saya%20ingin%20konsultasi%20/%20memesan%20jasa%20Portofolio%20Akademik.%20Terimakasih.'
     },
     'website-portofolio': {
         icon: 'badge',
@@ -291,7 +291,7 @@ const serviceDetails = {
         desc: 'Website portofolio online untuk menampilkan karya, CV, dan profil profesional kamu secara digital.',
         requirements: ['Isi/konten yang ingin ditampilkan (karya, CV, profil, dll)', 'Jumlah halaman website yang diinginkan', 'Preferensi warna/tema (jika ada)', 'Foto/logo pendukung (jika ada)', 'Deadline pengumpulan'],
         deliverables: ['Website portofolio online dan bisa diakses siapa saja', 'Desain personal branding yang menarik', 'Tampilan responsif di HP & laptop', 'Panduan singkat cara mengelola/update konten'],
-        wa: 'https://wa.me/628211474025?text=Halo%20Tuntasin%2C%20saya%20ingin%20memesan%20%2AJasa%20Pembuatan%20Website%20Portofolio%2A.%20Berikut%20detail%20kebutuhan%20saya%3A%0A%0A%F0%9F%93%9C%20%2AJenis%20Tugas%3A%2A%20Website%20Portofolio%0A%0ATerima%20kasih%21'
+        wa: 'https://wa.me/628211474025?text=Halo%20Tuntasin%2C%20saya%20ingin%20konsultasi%20/%20memesan%20jasa%20Website%20Portofolio.%20Terimakasih.'
     }
 };
 
