@@ -319,7 +319,7 @@ const serviceDetails = {
             },
             {
                 name: 'Paket Premium / Custom',
-                subtitle: 'Fitur Lengkap',
+                subtitle: 'Fitur Lengkap Untuk 100 Tamu',
                 price: 'Mulai Rp 350.000',
                 features: ['Semua fitur Paket Standar', 'Galeri foto & video prewedding', 'Custom nama link/domain undangan', 'Background musik & animasi tambahan', 'Amplop digital/e-gift', 'Kuota tamu bisa disesuaikan (custom)', 'Garansi revisi hingga 3x'],
                 addon: '+Rp 25.000 / 50 tamu tambahan dari kuota awal (berlaku kelipatan)'
