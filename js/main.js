@@ -266,6 +266,15 @@ const serviceDetails = {
         deliverables: ['File CV format ATS-friendly (Word & PDF)', 'Kata kunci dioptimalkan sesuai bidang', 'Struktur rapi & mudah dibaca sistem/HRD', 'Gratis 1x revisi minor'],
         wa: 'https://wa.me/628211474025?text=Halo%20Tuntasin%2C%20saya%20ingin%20konsultasi%20/%20memesan%20jasa%20%2ACV%20ATS%2A.%0A%0ATerimakasih.'
     },
+    'cv-kreatif': {
+        icon: 'brush',
+        title: 'CV Kreatif',
+        price: 'Mulai Rp 47rb',
+        desc: 'Desain CV bergaya visual menarik untuk menonjolkan personal branding di bidang kreatif.',
+        requirements: ['Posisi/bidang pekerjaan yang dituju', 'Riwayat pendidikan & pengalaman kerja/organisasi', 'Skill, portofolio, atau karya pendukung (jika ada)', 'Preferensi warna/gaya desain (jika ada)', 'Deadline pengumpulan'],
+        deliverables: ['File CV desain kreatif (Word/Canva & PDF)', 'Layout visual menarik & personal branding kuat', 'Warna & tipografi disesuaikan bidang kamu', 'Gratis 1x revisi minor'],
+        wa: 'https://wa.me/628211474025?text=Halo%20Tuntasin%2C%20saya%20ingin%20konsultasi%20/%20memesan%20jasa%20%2ACV%20Kreatif%2A.%0A%0ATerimakasih.'
+    },
     'surat-lamaran': {
         icon: 'mail',
         title: 'Surat Lamaran Kerja',
@@ -292,6 +301,15 @@ const serviceDetails = {
         requirements: ['Isi/konten yang ingin ditampilkan (karya, CV, profil, dll)', 'Jumlah halaman website yang diinginkan', 'Preferensi warna/tema (jika ada)', 'Foto/logo pendukung (jika ada)', 'Deadline pengumpulan'],
         deliverables: ['Website portofolio online dan bisa diakses siapa saja', 'Desain personal branding yang menarik', 'Tampilan responsif di HP & laptop', 'Panduan singkat cara mengelola/update konten'],
         wa: 'https://wa.me/628211474025?text=Halo%20Tuntasin%2C%20saya%20ingin%20konsultasi%20/%20memesan%20jasa%20%2AWebsite%20Portofolio%2A.%0A%0ATerimakasih.'
+    },
+    'website-undangan': {
+        icon: 'qr_code_2',
+        title: 'Website Undangan Digital',
+        price: 'Mulai Rp 97rb',
+        desc: 'Website undangan digital elegan lengkap dengan kode QR/barcode unik per tamu untuk langsung membuka undangan.',
+        requirements: ['Jenis acara & nama mempelai/penyelenggara', 'Tanggal, waktu, dan lokasi acara (bisa lebih dari 1 sesi)', 'Daftar nama tamu (untuk dibuatkan QR code masing-masing)', 'Foto/galeri pendukung (jika ada)', 'Preferensi tema/warna desain', 'Deadline pengumpulan'],
+        deliverables: ['Website undangan online (link aktif & bisa diakses siapa saja)', 'Kode QR/barcode unik per tamu yang langsung membuka undangan', 'Fitur RSVP/buku tamu digital', 'Tampilan responsif di HP & laptop', 'Panduan singkat cara membagikan link/QR ke tamu'],
+        wa: 'https://wa.me/628211474025?text=Halo%20Tuntasin%2C%20saya%20ingin%20konsultasi%20/%20memesan%20jasa%20%2AWebsite%20Undangan%20Digital%2A.%0A%0ATerimakasih.'
     }
 };
 
