@@ -305,10 +305,26 @@ const serviceDetails = {
     'website-undangan': {
         icon: 'qr_code_2',
         title: 'Website Undangan Digital',
-        price: 'Mulai Rp 97rb',
+        price: 'Mulai Rp 230rb',
         desc: 'Website undangan digital elegan lengkap dengan kode QR/barcode unik per tamu untuk langsung membuka undangan.',
-        requirements: ['Jenis acara & nama mempelai/penyelenggara', 'Tanggal, waktu, dan lokasi acara (bisa lebih dari 1 sesi)', 'Daftar nama tamu (untuk dibuatkan QR code masing-masing)', 'Foto/galeri pendukung (jika ada)', 'Preferensi tema/warna desain', 'Deadline pengumpulan'],
-        deliverables: ['Website undangan online (link aktif & bisa diakses siapa saja)', 'Kode QR/barcode unik per tamu yang langsung membuka undangan', 'Fitur RSVP/buku tamu digital', 'Tampilan responsif di HP & laptop', 'Panduan singkat cara membagikan link/QR ke tamu'],
+        requirements: ['Jenis acara & nama mempelai/penyelenggara', 'Tanggal, waktu, dan lokasi acara (bisa lebih dari 1 sesi)', 'Jumlah & daftar nama tamu (di atas kuota paket dikenakan biaya tambahan)', 'Foto/galeri pendukung (jika ada)', 'Preferensi tema/warna desain', 'Deadline pengumpulan'],
+        deliverables: ['Website undangan online (link aktif & bisa diakses siapa saja)', 'Kode QR/barcode unik per tamu yang langsung membuka undangan', 'Fitur RSVP/buku tamu digital', 'Tampilan responsif di HP & laptop', 'Garansi revisi hingga 3x', 'Panduan singkat cara membagikan link/QR ke tamu'],
+        packages: [
+            {
+                name: 'Paket Standar',
+                subtitle: 'Untuk 100 Tamu',
+                price: 'Mulai Rp 230.000',
+                features: ['Kuota hingga 100 tamu undangan', 'QR code check-in unik per tamu', 'RSVP & buku tamu digital', 'Pilihan tema desain siap pakai', 'Garansi revisi hingga 3x'],
+                addon: '+Rp 25.000 / 50 tamu tambahan (berlaku kelipatan)'
+            },
+            {
+                name: 'Paket Premium / Custom',
+                subtitle: 'Fitur Lengkap',
+                price: 'Mulai Rp 350.000',
+                features: ['Semua fitur Paket Standar', 'Galeri foto & video prewedding', 'Custom nama link/domain undangan', 'Background musik & animasi tambahan', 'Amplop digital/e-gift', 'Kuota tamu bisa disesuaikan (custom)', 'Garansi revisi hingga 3x'],
+                addon: '+Rp 25.000 / 50 tamu tambahan dari kuota awal (berlaku kelipatan)'
+            }
+        ],
         wa: 'https://wa.me/628211474025?text=Halo%20Tuntasin%2C%20saya%20ingin%20konsultasi%20/%20memesan%20jasa%20%2AWebsite%20Undangan%20Digital%2A.%0A%0ATerimakasih.'
     }
 };
@@ -320,6 +336,37 @@ function buildDetailListItem(text) {
     return li;
 }
 
+function buildPackageCard(pkg) {
+    const card = document.createElement('div');
+    card.className = 'border-2 border-primary/20 rounded-xl p-md bg-primary/5';
+
+    const header = document.createElement('div');
+    header.className = 'flex items-start justify-between gap-2 mb-2';
+    header.innerHTML = '<div><p class="font-bold text-on-surface text-sm">' + pkg.name + '</p>' +
+        '<p class="text-[11px] text-on-surface-variant">' + pkg.subtitle + '</p></div>' +
+        '<span class="flex-shrink-0 text-[11px] font-bold text-primary bg-primary/10 px-2.5 py-1 rounded-full whitespace-nowrap">' + pkg.price + '</span>';
+    card.appendChild(header);
+
+    const ul = document.createElement('ul');
+    ul.className = 'space-y-1.5 mt-2';
+    pkg.features.forEach(feat => {
+        const li = document.createElement('li');
+        li.className = 'flex items-start gap-2 text-xs text-on-surface-variant';
+        li.innerHTML = '<span class="material-symbols-outlined text-primary text-sm mt-0.5 flex-shrink-0">check_circle</span><span>' + feat + '</span>';
+        ul.appendChild(li);
+    });
+    card.appendChild(ul);
+
+    if (pkg.addon) {
+        const addon = document.createElement('div');
+        addon.className = 'flex items-start gap-2 text-xs text-secondary font-semibold mt-2.5 pt-2.5 border-t border-primary/15';
+        addon.innerHTML = '<span class="material-symbols-outlined text-secondary text-sm mt-0.5 flex-shrink-0">add_circle</span><span>Tambah Tamu: ' + pkg.addon + '</span>';
+        card.appendChild(addon);
+    }
+
+    return card;
+}
+
 function openServiceDetail(slug) {
     const data = serviceDetails[slug];
     if (!data) return;
@@ -329,6 +376,16 @@ function openServiceDetail(slug) {
     document.getElementById('service-detail-price').textContent = data.price;
     document.getElementById('service-detail-desc').textContent = data.desc;
     document.getElementById('service-detail-wa-link').href = data.wa;
+
+    const pkgContainer = document.getElementById('service-detail-packages');
+    pkgContainer.innerHTML = '';
+    if (data.packages && data.packages.length) {
+        const label = document.createElement('p');
+        label.className = 'flex items-center gap-2 font-bold text-on-surface text-sm mb-sm';
+        label.innerHTML = '<span class="material-symbols-outlined text-primary text-lg">inventory_2</span> Pilihan Paket';
+        pkgContainer.appendChild(label);
+        data.packages.forEach(pkg => pkgContainer.appendChild(buildPackageCard(pkg)));
+    }
 
     const reqList = document.getElementById('service-detail-requirements');
     reqList.innerHTML = '';
