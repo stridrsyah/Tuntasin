@@ -302,31 +302,6 @@ const serviceDetails = {
         deliverables: ['Website portofolio online dan bisa diakses siapa saja', 'Desain personal branding yang menarik', 'Tampilan responsif di HP & laptop', 'Panduan singkat cara mengelola/update konten', 'Revisi hingga 2x'],
         wa: 'https://wa.me/628211474025?text=Halo%20Tuntasin%2C%20saya%20ingin%20konsultasi%20/%20memesan%20jasa%20%2AWebsite%20Portofolio%2A.%0A%0ATerimakasih.'
     },
-    'website-undangan': {
-        icon: 'qr_code_2',
-        title: 'Website Undangan Digital',
-        price: 'Mulai Rp 250rb',
-        desc: 'Website undangan digital elegan lengkap dengan kode QR/barcode unik per tamu untuk langsung membuka undangan.',
-        requirements: ['Jenis acara & nama mempelai/penyelenggara', 'Tanggal, waktu, dan lokasi acara (bisa lebih dari 1 sesi)', 'Jumlah & daftar nama tamu (di atas kuota paket dikenakan biaya tambahan)', 'Foto/galeri pendukung (jika ada)', 'Preferensi tema/warna desain', 'Deadline pengumpulan'],
-        deliverables: ['Website undangan online (link aktif & bisa diakses siapa saja)', 'Kode QR/barcode unik per tamu yang langsung membuka undangan', 'Fitur sesuai paket menu yang dipilih' , 'Tampilan responsif di HP & laptop', 'Garansi revisi hingga 3x', 'Panduan singkat cara membagikan link/QR ke tamu'],
-        packages: [
-            {
-                name: 'Paket Standar',
-                subtitle: 'Untuk 100 Tamu',
-                price: 'Mulai Rp 250.000',
-                features: ['Kuota hingga 100 tamu undangan', 'QR code check-in unik per tamu', 'RSVP & buku tamu digital', 'Pilihan tema desain siap pakai', 'Garansi revisi hingga 3x'],
-                addon: '+Rp 25.000 / 50 tamu tambahan (berlaku kelipatan)'
-            },
-            {
-                name: 'Paket Premium / Custom',
-                subtitle: 'Fitur Lengkap',
-                price: 'Mulai Rp 350.000',
-                features: ['Semua fitur Paket Standar', 'Galeri foto & video prewedding', 'Custom nama link/domain undangan', 'Background musik & animasi tambahan', 'Amplop digital/e-gift', 'Kuota tamu bisa disesuaikan (custom)', 'Garansi revisi hingga 3x'],
-                addon: '+Rp 25.000 / 50 tamu tambahan dari kuota awal (berlaku kelipatan)'
-            }
-        ],
-        wa: 'https://wa.me/628211474025?text=Halo%20Tuntasin%2C%20saya%20ingin%20konsultasi%20/%20memesan%20jasa%20%2AWebsite%20Undangan%20Digital%2A.%0A%0ATerimakasih.'
-    }
 };
 
 function buildDetailListItem(text) {
