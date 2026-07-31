@@ -302,6 +302,33 @@ const serviceDetails = {
         deliverables: ['Website portofolio online dan bisa diakses siapa saja', 'Desain personal branding yang menarik', 'Tampilan responsif di HP & laptop', 'Panduan singkat cara mengelola/update konten', 'Revisi hingga 2x'],
         wa: 'https://wa.me/628211474025?text=Halo%20Tuntasin%2C%20saya%20ingin%20konsultasi%20/%20memesan%20jasa%20%2AWebsite%20Portofolio%2A.%0A%0ATerimakasih.'
     },
+    'paket-lamaran-kerja': {
+        icon: 'work_history',
+        title: 'Paket Berkas Lamaran Kerja',
+        price: 'Rp 40rb (Hemat 20%)',
+        desc: 'CV (ATS/Kreatif) + Surat Lamaran Kerja, langsung digabung jadi 1 file PDF siap kirim ke HRD. Lebih hemat dibanding pesan satu-satu.',
+        requirements: ['Posisi/bidang pekerjaan yang dituju', 'Nama perusahaan tujuan', 'Pilihan gaya CV: ATS atau Kreatif', 'Riwayat pendidikan & pengalaman kerja/organisasi', 'Skill & sertifikasi relevan (jika ada)', 'Deadline pengumpulan'],
+        deliverables: ['File CV (format ATS atau Kreatif sesuai pilihan)', 'File Surat Lamaran Kerja', '1 file PDF gabungan CV + Surat Lamaran, siap kirim ke HRD', 'File terpisah (Word) juga disediakan', 'Gratis 1x revisi minor'],
+        wa: 'https://wa.me/628211474025?text=Halo%20Tuntasin%2C%20saya%20ingin%20konsultasi%20/%20memesan%20jasa%20%2APaket%20Berkas%20Lamaran%20Kerja%2A.%0A%0ATerimakasih.'
+    },
+    'paket-tugas-presentasi': {
+        icon: 'auto_stories',
+        title: 'Paket Tugas & Presentasi Kuliah',
+        price: 'Rp 75rb (Hemat 17%)',
+        desc: 'Makalah + Slide PPT dengan tema desain senada, langsung siap dikumpulkan sekaligus dipresentasikan.',
+        requirements: ['Topik atau judul makalah/presentasi', 'Jumlah halaman makalah & jumlah slide yang diinginkan', 'Format penulisan (misal APA/MLA) jika ada', 'Referensi wajib jika ada', 'Deadline pengumpulan'],
+        deliverables: ['File makalah lengkap (Word & PDF)', 'File PPT siap presentasi (PPTX & PDF)', 'Tema desain PPT senada dengan isi makalah', 'Bebas plagiarisme dengan cek similarity', 'Gratis 1x revisi minor'],
+        wa: 'https://wa.me/628211474025?text=Halo%20Tuntasin%2C%20saya%20ingin%20konsultasi%20/%20memesan%20jasa%20%2APaket%20Tugas%20%26%20Presentasi%20Kuliah%2A.%0A%0ATerimakasih.'
+    },
+    'paket-sidang-pkl': {
+        icon: 'co_present',
+        title: 'Paket Sidang PKL Siap Tampil',
+        price: 'Rp 95rb (Hemat 14%)',
+        desc: 'Laporan PKL + Slide PPT untuk sidang/ujian, tema desain senada supaya presentasimu terlihat lebih rapi.',
+        requirements: ['Nama instansi/perusahaan tempat PKL', 'Data & catatan kegiatan selama praktik kerja', 'Jumlah halaman laporan & jumlah slide presentasi sidang', 'Format laporan dari institusi (jika ada template)', 'Deadline pengumpulan'],
+        deliverables: ['File laporan PKL lengkap (Word & PDF)', 'File PPT untuk sidang/ujian PKL (PPTX & PDF)', 'Tema desain laporan & PPT senada', 'Layout profesional sesuai standar institusi', 'Gratis 1x revisi minor'],
+        wa: 'https://wa.me/628211474025?text=Halo%20Tuntasin%2C%20saya%20ingin%20konsultasi%20/%20memesan%20jasa%20%2APaket%20Sidang%20PKL%20Siap%20Tampil%2A.%0A%0ATerimakasih.'
+    },
 };
 
 function buildDetailListItem(text) {
