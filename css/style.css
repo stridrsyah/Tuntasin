@@ -128,3 +128,16 @@
     padding: 18px 24px;
     text-align: center;
 }
+
+/* Hide scrollbar visually while keeping scroll functionality (used in service/paket detail modal) */
+.no-scrollbar {
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera */
+}
