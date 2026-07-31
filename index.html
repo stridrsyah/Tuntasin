@@ -971,6 +971,11 @@
                                         class="material-symbols-outlined text-secondary text-sm mt-0.5 flex-shrink-0">check_circle</span>
                                     <span>Digabung otomatis jadi 1 file PDF siap pakai</span>
                                 </li>
+                                <li class="flex items-start gap-2 text-xs text-on-surface-variant">
+                                    <span
+                                        class="material-symbols-outlined text-secondary text-sm mt-0.5 flex-shrink-0">check_circle</span>
+                                    <span>Bisa gabung berkas lain juga (opsional, kamu siapkan filenya)</span>
+                                </li>
                             </ul>
                             <div
                                 class="flex items-end gap-2 mb-lg mt-auto pt-md border-t border-dashed border-outline-variant/40">
@@ -1676,19 +1681,23 @@
         class="hidden fixed inset-0 z-[100] flex items-end md:items-center justify-center p-0 md:p-gutter">
         <div id="service-detail-backdrop" class="absolute inset-0 bg-on-surface/60 backdrop-blur-sm"></div>
         <div id="service-detail-panel"
-            class="relative bg-white w-full md:max-w-lg max-h-[90vh] rounded-t-3xl md:rounded-3xl overflow-y-auto shadow-2xl">
+            class="relative bg-white w-full md:max-w-2xl max-h-[90vh] rounded-t-3xl md:rounded-3xl overflow-y-auto shadow-2xl">
             <div
-                class="sticky top-0 bg-white border-b border-outline-variant/30 p-lg flex items-start justify-between gap-3 z-10">
-                <div class="flex items-center gap-3 min-w-0">
-                    <div class="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-primary to-secondary rounded-t-3xl md:rounded-t-3xl">
+            </div>
+            <div
+                class="sticky top-0 bg-white border-b border-outline-variant/30 p-lg md:p-xl flex items-start justify-between gap-3 z-10">
+                <div class="flex items-center gap-3 md:gap-4 min-w-0">
+                    <div
+                        class="w-11 h-11 md:w-14 md:h-14 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
                         <span id="service-detail-icon"
-                            class="material-symbols-outlined text-primary text-2xl">description</span>
+                            class="material-symbols-outlined text-primary text-2xl md:text-3xl">description</span>
                     </div>
                     <div class="min-w-0">
-                        <h4 id="service-detail-title" class="font-bold text-on-surface text-lg leading-snug truncate">
-                        </h4>
+                        <h4 id="service-detail-title"
+                            class="font-bold text-on-surface text-lg md:text-xl leading-snug truncate"></h4>
                         <span id="service-detail-price"
-                            class="text-[11px] font-bold text-primary bg-primary/10 px-2.5 py-1 rounded-full whitespace-nowrap inline-block mt-1"></span>
+                            class="text-[11px] md:text-xs font-bold text-primary bg-primary/10 px-2.5 py-1 md:px-3 md:py-1.5 rounded-full whitespace-nowrap inline-block mt-1"></span>
                     </div>
                 </div>
                 <button type="button" onclick="closeServiceDetail()" aria-label="Tutup"
@@ -1697,34 +1706,36 @@
                 </button>
             </div>
 
-            <div class="p-lg">
+            <div class="p-lg md:p-xl">
                 <p id="service-detail-desc" class="text-body-sm text-on-surface-variant leading-relaxed mb-lg"></p>
 
                 <div id="service-detail-packages" class="mb-lg space-y-3"></div>
 
-                <div class="mb-lg">
-                    <p class="flex items-center gap-2 font-bold text-on-surface text-sm mb-sm">
-                        <span class="material-symbols-outlined text-primary text-lg">checklist</span>
-                        Yang Perlu Kamu Siapkan
-                    </p>
-                    <ul id="service-detail-requirements" class="space-y-2"></ul>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-lg md:gap-xl mb-xl">
+                    <div>
+                        <p class="flex items-center gap-2 font-bold text-on-surface text-sm mb-sm">
+                            <span class="material-symbols-outlined text-primary text-lg">checklist</span>
+                            Yang Perlu Kamu Siapkan
+                        </p>
+                        <ul id="service-detail-requirements" class="space-y-2"></ul>
+                    </div>
+
+                    <div>
+                        <p class="flex items-center gap-2 font-bold text-on-surface text-sm mb-sm">
+                            <span class="material-symbols-outlined text-secondary text-lg">redeem</span>
+                            Yang Akan Kamu Dapatkan
+                        </p>
+                        <ul id="service-detail-deliverables" class="space-y-2"></ul>
+                    </div>
                 </div>
 
-                <div class="mb-xl">
-                    <p class="flex items-center gap-2 font-bold text-on-surface text-sm mb-sm">
-                        <span class="material-symbols-outlined text-secondary text-lg">redeem</span>
-                        Yang Akan Kamu Dapatkan
-                    </p>
-                    <ul id="service-detail-deliverables" class="space-y-2"></ul>
-                </div>
-
-                <div class="flex flex-col gap-2">
+                <div class="flex flex-col md:flex-row gap-2">
                     <a id="service-detail-wa-link" href="#" target="_blank"
-                        class="w-full py-3 rounded-xl bg-primary text-on-primary font-bold text-sm shadow-md shadow-primary/20 hover:opacity-90 active:scale-95 transition-all text-center flex items-center justify-center gap-2">
+                        class="w-full md:flex-1 py-3 rounded-xl bg-primary text-on-primary font-bold text-sm shadow-md shadow-primary/20 hover:opacity-90 active:scale-95 transition-all text-center flex items-center justify-center gap-2">
                         <span class="material-symbols-outlined text-base">chat</span> Pesan via WhatsApp
                     </a>
                     <button type="button" onclick="closeServiceDetail()"
-                        class="w-full py-3 rounded-xl border-2 border-outline-variant/50 text-on-surface font-bold text-sm hover:bg-outline-variant/10 active:scale-95 transition-all text-center flex items-center justify-center gap-2">
+                        class="w-full md:w-auto md:px-xl py-3 rounded-xl border-2 border-outline-variant/50 text-on-surface font-bold text-sm hover:bg-outline-variant/10 active:scale-95 transition-all text-center flex items-center justify-center gap-2">
                         <span class="material-symbols-outlined text-base">arrow_back</span> Kembali
                     </button>
                 </div>

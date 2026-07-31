@@ -306,9 +306,9 @@ const serviceDetails = {
         icon: 'work_history',
         title: 'Paket Berkas Lamaran Kerja',
         price: 'Rp 40rb (Hemat 20%)',
-        desc: 'CV (ATS/Kreatif) + Surat Lamaran Kerja, langsung digabung jadi 1 file PDF siap kirim ke HRD. Lebih hemat dibanding pesan satu-satu.',
-        requirements: ['Posisi/bidang pekerjaan yang dituju', 'Nama perusahaan tujuan', 'Pilihan gaya CV: ATS atau Kreatif', 'Riwayat pendidikan & pengalaman kerja/organisasi', 'Skill & sertifikasi relevan (jika ada)', 'Deadline pengumpulan'],
-        deliverables: ['File CV (format ATS atau Kreatif sesuai pilihan)', 'File Surat Lamaran Kerja', '1 file PDF gabungan CV + Surat Lamaran, siap kirim ke HRD', 'File terpisah (Word) juga disediakan', 'Gratis 1x revisi minor'],
+        desc: 'CV (ATS/Kreatif) + Surat Lamaran Kerja, langsung digabung jadi 1 file PDF siap kirim ke HRD. Mau gabungkan berkas lain juga (transkrip, sertifikat, ijazah, portofolio, dll)? Bisa sekalian, tinggal siapkan filenya. Lebih hemat dibanding pesan satu-satu.',
+        requirements: ['Posisi/bidang pekerjaan yang dituju', 'Nama perusahaan tujuan', 'Pilihan gaya CV: ATS atau Kreatif', 'Riwayat pendidikan & pengalaman kerja/organisasi', 'Skill & sertifikasi relevan (jika ada)', 'File berkas lain yang ingin ikut digabung (transkrip, sertifikat, ijazah, portofolio, dll) — siapkan jika ingin semuanya jadi 1 file', 'Deadline pengumpulan'],
+        deliverables: ['File CV (format ATS atau Kreatif sesuai pilihan)', 'File Surat Lamaran Kerja', '1 file PDF gabungan CV + Surat Lamaran (bisa ditambah berkas lain yang kamu siapkan), siap kirim ke HRD', 'File terpisah (Word) juga disediakan', 'Gratis 1x revisi minor'],
         wa: 'https://wa.me/628211474025?text=Halo%20Tuntasin%2C%20saya%20ingin%20konsultasi%20/%20memesan%20jasa%20%2APaket%20Berkas%20Lamaran%20Kerja%2A.%0A%0ATerimakasih.'
     },
     'paket-tugas-presentasi': {
