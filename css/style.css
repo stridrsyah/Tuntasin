@@ -103,22 +103,8 @@
     }
 }
 
-/* Mobile menu animation */
-#mobile-menu {
-    animation: slideDown 0.2s ease-out;
-}
+/* Mobile sidebar uses Tailwind translate-x transition, no extra animation needed */
 
-@keyframes slideDown {
-    from {
-        opacity: 0;
-        transform: translateY(-8px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
 /* ===========================
    Brand: Tuntasin Logo Colors
