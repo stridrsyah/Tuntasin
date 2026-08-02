@@ -43,6 +43,52 @@ document.querySelectorAll('.mobile-nav-link').forEach(link => {
     link.addEventListener('click', closeMobileMenu);
 });
 
+// ===========================
+//  Scroll Spy (Desktop Nav + Mobile Sidebar)
+//  Highlights whichever menu item matches the section currently
+//  in view, so the highlight moves as the page is scrolled instead
+//  of staying stuck on "Home".
+// ===========================
+(function () {
+    const desktopLinks = Array.from(document.querySelectorAll('.nav-link[href^="#"]'));
+    const mobileLinks = Array.from(document.querySelectorAll('.mobile-nav-link[href^="#"]'));
+    const allLinks = [...desktopLinks, ...mobileLinks];
+    if (!allLinks.length) return;
+
+    const sectionIds = [...new Set(allLinks.map(link => link.getAttribute('href').slice(1)))];
+    const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
+    if (!sections.length) return;
+
+    function setActiveLink(id) {
+        desktopLinks.forEach(link => {
+            const isActive = link.getAttribute('href') === '#' + id;
+            link.classList.toggle('text-primary', isActive);
+            link.classList.toggle('font-semibold', isActive);
+            link.classList.toggle('border-b-2', isActive);
+            link.classList.toggle('border-primary', isActive);
+            link.classList.toggle('text-on-surface-variant', !isActive);
+        });
+        mobileLinks.forEach(link => {
+            const isActive = link.getAttribute('href') === '#' + id;
+            link.classList.toggle('text-primary', isActive);
+            link.classList.toggle('font-semibold', isActive);
+            link.classList.toggle('bg-surface-container-high', isActive);
+            link.classList.toggle('text-on-surface-variant', !isActive);
+        });
+    }
+
+    let activeId = sections[0].id;
+    const spyObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) activeId = entry.target.id;
+        });
+        setActiveLink(activeId);
+    }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+
+    sections.forEach(section => spyObserver.observe(section));
+    setActiveLink(activeId);
+})();
+
 
 // Stats Animation
 const observerOptions = { threshold: 0.1 };
