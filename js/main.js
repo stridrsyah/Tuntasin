@@ -208,7 +208,7 @@ const serviceDetails = {
     'makalah': {
         icon: 'description',
         title: 'Makalah / Artikel',
-        price: 'Mulai Rp 65rb',
+        price: 'Mulai Rp 85rb',
         desc: 'Penyusunan makalah sistematis dengan standar akademik tinggi, bebas plagiarisme, siap kumpul.',
         requirements: ['Topik atau judul makalah (boleh masih kasar/belum fix)', 'Jumlah halaman & format penulisan yang diminta (misal APA/MLA)', 'Referensi wajib jika ada (jurnal, buku, dsb)', 'Deadline pengumpulan'],
         deliverables: ['File makalah lengkap (Word & PDF)', 'Struktur akademik rapi: cover, BAB, daftar pustaka', 'Bebas plagiarisme dengan cek similarity', 'Gratis 1x revisi minor'],
@@ -334,10 +334,10 @@ const serviceDetails = {
     'paket-sidang-pkl': {
         icon: 'co_present',
         title: 'Paket Sidang PKL Siap Tampil',
-        price: 'Rp 95rb (Hemat 14%)',
-        desc: 'Laporan PKL + Slide PPT untuk sidang/ujian, tema desain senada supaya presentasimu terlihat lebih rapi.',
-        requirements: ['Nama instansi/perusahaan tempat PKL', 'Data & catatan kegiatan selama praktik kerja', 'Jumlah halaman laporan & jumlah slide presentasi sidang', 'Format laporan dari institusi (jika ada template)', 'Deadline pengumpulan'],
-        deliverables: ['File laporan PKL lengkap (Word & PDF)', 'File PPT untuk sidang/ujian PKL (PPTX & PDF)', 'Tema desain laporan & PPT senada', 'Layout profesional sesuai standar institusi', 'Gratis 1x revisi minor'],
+        price: 'Rp 95rb (Hemat 17%)',
+        desc: 'Laporan PKL + 10 Slide PPT untuk sidang/ujian, tema desain senada supaya presentasimu terlihat lebih rapi. Butuh lebih dari 10 slide? Bisa ditambah, tinggal chat dulu ya.',
+        requirements: ['Nama instansi/perusahaan tempat PKL', 'Data & catatan kegiatan selama praktik kerja', 'Jumlah halaman laporan', 'Format laporan dari institusi (jika ada template)', 'Deadline pengumpulan'],
+        deliverables: ['File laporan PKL lengkap (Word & PDF)', '10 Slide PPT untuk sidang/ujian PKL (PPTX & PDF)', 'Tema desain laporan & PPT senada', 'Layout profesional sesuai standar institusi', 'Gratis 1x revisi minor'],
         wa: 'https://wa.me/628211474025?text=Halo%20Tuntasin%2C%20saya%20ingin%20konsultasi%20/%20memesan%20jasa%20%2APaket%20Sidang%20PKL%20Siap%20Tampil%2A.%0A%0ATerimakasih.'
     },
 };

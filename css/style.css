@@ -105,6 +105,37 @@
 
 /* Mobile sidebar uses Tailwind translate-x transition, no extra animation needed */
 
+/* Fix: on touch devices, Tailwind's hover: utilities apply as plain CSS :hover
+   (no built-in touch guard). Tapping a sidebar link triggers :hover and it stays
+   "stuck" on that link — it doesn't clear or move correctly when the page/sidebar
+   is scrolled or another link is tapped, since touch has no real mouseleave.
+   Disable the sidebar's hover-only styling on devices without real hover support,
+   and rely on :active for immediate, correctly-clearing tap feedback instead. */
+@media (hover: none), (pointer: coarse) {
+    .mobile-nav-link:hover {
+        background-color: transparent;
+        color: inherit;
+    }
+
+    .mobile-nav-link:active {
+        background-color: #e5eeff;
+        /* matches Tailwind surface-container */
+        color: #004ac6;
+        /* matches Tailwind primary */
+    }
+
+    #hamburger-btn:hover,
+    #sidebar-close-btn:hover {
+        background-color: transparent;
+    }
+
+    #hamburger-btn:active,
+    #sidebar-close-btn:active {
+        background-color: #e5eeff;
+        /* matches Tailwind surface-container / outline-variant tint */
+    }
+}
+
 
 /* ===========================
    Brand: Tuntasin Logo Colors
