@@ -219,7 +219,7 @@ const serviceDetails = {
         title: 'Laporan PKL',
         price: 'Mulai Rp 85rb',
         desc: 'Dokumentasi praktik kerja profesional, terstruktur rapi, dan bergaransi revisi.',
-        requirements: ['Nama instansi/perusahaan tempat PKL', 'Data & catatan kegiatan selama praktik kerja', 'Jumlah halaman yang diminta kampus/sekolah', 'Format laporan dari institusi (jika ada template)', 'Deadline pengumpulan'],
+        requirements: ['Nama instansi/perusahaan tempat PKL', 'Referensi wajib jika ada', 'Data & catatan kegiatan selama praktik kerja', 'Jumlah halaman yang ditentukan', 'Format laporan dari institusi (jika ada template)', 'Deadline pengumpulan'],
         deliverables: ['File laporan PKL lengkap (Word & PDF)', 'Analisis data & pembahasan kegiatan kerja', 'Layout profesional sesuai standar institusi', 'Gratis revisi jika ada bagian yang tidak sesuai'],
         wa: 'https://wa.me/628211474025?text=Halo%20Tuntasin%2C%20saya%20ingin%20konsultasi%20/%20memesan%20jasa%20%2ALaporan%20PKL%2A.%0A%0ATerimakasih.'
     },
@@ -244,7 +244,7 @@ const serviceDetails = {
     'ppt': {
         icon: 'slideshow',
         title: 'Slide PPT / Presentasi',
-        price: 'Mulai Rp 25rb',
+        price: 'Mulai Rp 3rb',
         desc: 'Visualisasi ide yang memukau dan mudah dipahami untuk presentasi akademik.',
         requirements: ['Topik atau judul presentasi', 'Jumlah slide yang diinginkan', 'Isi materi/poin penting yang wajib ada', 'Referensi desain/tema (jika ada preferensi)', 'Deadline pengumpulan'],
         deliverables: ['File PPT siap presentasi (PPTX & PDF)', 'Desain modern & profesional', 'Catatan presenter di setiap slide', 'Gratis 1x revisi minor'],
@@ -324,7 +324,7 @@ const serviceDetails = {
     },
     'paket-tugas-presentasi': {
         icon: 'auto_stories',
-        title: 'Paket Tugas & Presentasi Kuliah',
+        title: 'Paket Tugas & Presentasi',
         price: 'Rp 75rb (Hemat 17%)',
         desc: 'Makalah + Slide PPT dengan tema desain senada, langsung siap dikumpulkan sekaligus dipresentasikan.',
         requirements: ['Topik atau judul makalah/presentasi', 'Jumlah halaman makalah & jumlah slide yang diinginkan', 'Format penulisan (misal APA/MLA) jika ada', 'Referensi wajib jika ada', 'Deadline pengumpulan'],
