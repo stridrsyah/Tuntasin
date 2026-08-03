@@ -44,31 +44,22 @@ document.querySelectorAll('.mobile-nav-link').forEach(link => {
 });
 
 // ===========================
-//  Scroll Spy (Desktop Nav + Mobile Sidebar)
-//  Highlights whichever menu item matches the section currently
+//  Scroll Spy (Sidebar Navigation)
+//  Highlights whichever sidebar menu item matches the section currently
 //  in view, so the highlight moves as the page is scrolled instead
-//  of staying stuck on "Home".
+//  of staying stuck on one item. Sidebar is used on both mobile and
+//  desktop now, so this applies everywhere.
 // ===========================
 (function () {
-    const desktopLinks = Array.from(document.querySelectorAll('.nav-link[href^="#"]'));
-    const mobileLinks = Array.from(document.querySelectorAll('.mobile-nav-link[href^="#"]'));
-    const allLinks = [...desktopLinks, ...mobileLinks];
-    if (!allLinks.length) return;
+    const navLinks = Array.from(document.querySelectorAll('.mobile-nav-link[href^="#"]'));
+    if (!navLinks.length) return;
 
-    const sectionIds = [...new Set(allLinks.map(link => link.getAttribute('href').slice(1)))];
+    const sectionIds = [...new Set(navLinks.map(link => link.getAttribute('href').slice(1)))];
     const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
     if (!sections.length) return;
 
     function setActiveLink(id) {
-        desktopLinks.forEach(link => {
-            const isActive = link.getAttribute('href') === '#' + id;
-            link.classList.toggle('text-primary', isActive);
-            link.classList.toggle('font-semibold', isActive);
-            link.classList.toggle('border-b-2', isActive);
-            link.classList.toggle('border-primary', isActive);
-            link.classList.toggle('text-on-surface-variant', !isActive);
-        });
-        mobileLinks.forEach(link => {
+        navLinks.forEach(link => {
             const isActive = link.getAttribute('href') === '#' + id;
             link.classList.toggle('text-primary', isActive);
             link.classList.toggle('font-semibold', isActive);

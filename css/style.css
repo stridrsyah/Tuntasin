@@ -103,6 +103,13 @@
     }
 }
 
+/* Fixed header is 72px tall; without this, clicking any anchor link
+   (sidebar menu, footer links, etc.) scrolls the target section flush
+   to the very top of the viewport, hiding it behind the fixed header. */
+html {
+    scroll-padding-top: 88px;
+}
+
 /* Mobile sidebar uses Tailwind translate-x transition, no extra animation needed */
 
 /* Fix: on touch devices, Tailwind's hover: utilities apply as plain CSS :hover
@@ -111,7 +118,8 @@
    is scrolled or another link is tapped, since touch has no real mouseleave.
    Disable the sidebar's hover-only styling on devices without real hover support,
    and rely on :active for immediate, correctly-clearing tap feedback instead. */
-@media (hover: none), (pointer: coarse) {
+@media (hover: none),
+(pointer: coarse) {
     .mobile-nav-link:hover {
         background-color: transparent;
         color: inherit;

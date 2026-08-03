@@ -186,27 +186,6 @@
                 <span class="font-headline-sm text-headline-sm font-bold text-primary"><span
                         class="brand-tunta">Tunta</span><span class="brand-sin">sin</span></span>
             </div>
-            <!-- Desktop Nav -->
-            <nav class="hidden md:flex gap-xl">
-                <a class="nav-link text-on-surface-variant hover:text-primary font-body-md text-body-md transition-all duration-300"
-                    href="#home">Home</a>
-                <a class="nav-link text-on-surface-variant hover:text-primary font-body-md text-body-md transition-all duration-300"
-                    href="#promo">Promo</a>
-                <a class="nav-link text-on-surface-variant hover:text-primary font-body-md text-body-md transition-all duration-300"
-                    href="#layanan">Layanan & Harga</a>
-                <a class="nav-link text-on-surface-variant hover:text-primary font-body-md text-body-md transition-all duration-300"
-                    href="#paket">Paket Hemat</a>
-                <a class="nav-link text-on-surface-variant hover:text-primary font-body-md text-body-md transition-all duration-300"
-                    href="#tentang">Tentang Kami</a>
-                <a class="nav-link text-on-surface-variant hover:text-primary font-body-md text-body-md transition-all duration-300"
-                    href="#cara-pesan">Cara Pemesanan</a>
-                <a class="nav-link text-on-surface-variant hover:text-primary font-body-md text-body-md transition-all duration-300"
-                    href="#testimonials">Testimonials</a>
-                <a class="nav-link text-on-surface-variant hover:text-primary font-body-md text-body-md transition-all duration-300"
-                    href="#qna">QnA</a>
-                <a class="nav-link text-on-surface-variant hover:text-primary font-body-md text-body-md transition-all duration-300"
-                    href="#contact">Contact</a>
-            </nav>
             <!-- Right side -->
             <div class="flex items-center gap-md">
                 <a href="https://wa.me/628211474025?text=Halo%20Tuntasin%2C%20saya%20ingin%20pesan%20sekarang"
@@ -214,22 +193,24 @@
                     class="hidden sm:flex bg-primary text-on-primary px-xl py-3 rounded-full font-semibold hover:opacity-90 active:scale-95 transition-all">
                     Pesan Sekarang
                 </a>
-                <!-- Hamburger Button -->
-                <button id="hamburger-btn" class="md:hidden p-2 rounded-lg hover:bg-surface-container transition-colors"
+                <!-- Menu Button (opens sidebar on all screen sizes) -->
+                <button id="hamburger-btn"
+                    class="flex items-center gap-2 p-2 md:pl-4 md:pr-3 rounded-lg hover:bg-surface-container transition-colors"
                     aria-label="Menu">
+                    <span class="hidden md:inline text-on-surface font-semibold text-sm">Menu</span>
                     <span class="material-symbols-outlined text-on-surface" id="hamburger-icon">menu</span>
                 </button>
             </div>
         </div>
     </header>
 
-    <!-- Mobile Sidebar Backdrop (placed outside header so it isn't affected by header's backdrop-filter, which would otherwise become the containing block for these fixed elements and break full-height sizing) -->
+    <!-- Sidebar Backdrop (placed outside header so it isn't affected by header's backdrop-filter, which would otherwise become the containing block for these fixed elements and break full-height sizing) -->
     <div id="mobile-menu-backdrop"
-        class="md:hidden fixed inset-0 bg-on-surface/60 backdrop-blur-sm z-40 opacity-0 pointer-events-none transition-opacity duration-300">
+        class="fixed inset-0 bg-on-surface/60 backdrop-blur-sm z-40 opacity-0 pointer-events-none transition-opacity duration-300">
     </div>
-    <!-- Mobile Sidebar -->
+    <!-- Sidebar Navigation (used on both mobile and desktop) -->
     <aside id="mobile-menu"
-        class="md:hidden fixed top-0 right-0 h-full w-[85%] max-w-xs bg-surface z-50 shadow-2xl transform translate-x-full transition-transform duration-300 ease-out flex flex-col">
+        class="fixed top-0 right-0 h-full w-[85%] max-w-xs md:w-96 md:max-w-sm bg-surface z-50 shadow-2xl transform translate-x-full transition-transform duration-300 ease-out flex flex-col">
         <div class="flex items-center justify-between p-lg border-b border-outline-variant/30 flex-shrink-0">
             <div class="flex items-center gap-2">
                 <div class="w-9 h-9 bg-primary-container rounded-lg flex items-center justify-center text-white">
@@ -249,10 +230,6 @@
                 class="mobile-nav-link flex items-center gap-3 px-md py-3 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-primary transition-all">
                 <span class="material-symbols-outlined text-sm">home</span> Home
             </a>
-            <a href="#promo"
-                class="mobile-nav-link flex items-center gap-3 px-md py-3 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-primary transition-all">
-                <span class="material-symbols-outlined text-sm">sell</span> Promo
-            </a>
             <a href="#layanan"
                 class="mobile-nav-link flex items-center gap-3 px-md py-3 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-primary transition-all">
                 <span class="material-symbols-outlined text-sm">design_services</span> Layanan & Harga
@@ -261,13 +238,17 @@
                 class="mobile-nav-link flex items-center gap-3 px-md py-3 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-primary transition-all">
                 <span class="material-symbols-outlined text-sm">redeem</span> Paket Hemat
             </a>
-            <a href="#tentang"
+            <a href="#promo"
                 class="mobile-nav-link flex items-center gap-3 px-md py-3 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-primary transition-all">
-                <span class="material-symbols-outlined text-sm">info</span> Tentang Kami
+                <span class="material-symbols-outlined text-sm">sell</span> Promo
             </a>
             <a href="#cara-pesan"
                 class="mobile-nav-link flex items-center gap-3 px-md py-3 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-primary transition-all">
                 <span class="material-symbols-outlined text-sm">checklist</span> Cara Pemesanan
+            </a>
+            <a href="#tentang"
+                class="mobile-nav-link flex items-center gap-3 px-md py-3 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-primary transition-all">
+                <span class="material-symbols-outlined text-sm">info</span> Tentang Kami
             </a>
             <a href="#testimonials"
                 class="mobile-nav-link flex items-center gap-3 px-md py-3 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-primary transition-all">
@@ -369,73 +350,6 @@
                         <p class="text-body-sm font-label-caps text-on-surface-variant uppercase tracking-wider">Free
                             Revisi</p>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Social Follow Promo Banner -->
-        <section class="py-2xl bg-gradient-to-r from-[#004ac6] via-[#0071c2] to-[#0ea5e9] relative" id="promo">
-            <div class="max-w-container-max mx-auto px-gutter relative z-10">
-                <div class="flex flex-col items-center gap-lg text-center">
-
-                    <!-- Label Promo -->
-                    <div
-                        class="inline-flex items-center gap-1.5 bg-white/10 border border-white/25 px-3 py-1 rounded-full">
-                        <span class="material-symbols-outlined text-yellow-300 text-sm"
-                            style="font-variation-settings: 'FILL' 1">sell</span>
-                        <span class="text-white text-[11px] font-bold uppercase tracking-widest">Promo
-                            Berlangsung</span>
-                    </div>
-
-                    <!-- Heading -->
-                    <div>
-                        <h3 class="text-white font-bold text-headline-sm leading-snug mb-2">
-                            Follow <span class="text-yellow-300">@tuntasinaja.my.id</span> &amp; Dapat Bonus!
-                        </h3>
-                        <p class="text-white/80 text-body-sm leading-relaxed max-w-lg mx-auto">
-                            Dapatkan <strong class="text-yellow-300">potongan harga 6%</strong> + <strong
-                                class="text-yellow-300">bonus 2x revisi gratis</strong> untuk setiap order — cukup
-                            follow akun
-                            Instagram kami &amp; tunjukkan bukti follow saat pesan.
-                        </p>
-                    </div>
-
-                    <!-- Benefit list -->
-                    <div
-                        class="flex flex-wrap justify-center items-center gap-x-4 gap-y-2 text-white/90 text-xs font-semibold">
-                        <span class="flex items-center gap-1.5">
-                            <span class="material-symbols-outlined text-yellow-300 text-base"
-                                style="font-variation-settings:'FILL' 1">check_circle</span>
-                            Diskon 6%
-                        </span>
-                        <span class="hidden sm:inline text-white/30">|</span>
-                        <span class="flex items-center gap-1.5">
-                            <span class="material-symbols-outlined text-yellow-300 text-base"
-                                style="font-variation-settings:'FILL' 1">check_circle</span>
-                            +2x Revisi Gratis
-                        </span>
-                        <span class="hidden sm:inline text-white/30">|</span>
-                        <span class="flex items-center gap-1.5">
-                            <span class="material-symbols-outlined text-yellow-300 text-base"
-                                style="font-variation-settings:'FILL' 1">check_circle</span>
-                            Berlaku Semua Layanan
-                        </span>
-                    </div>
-
-                    <!-- CTA Button -->
-                    <div class="flex flex-col items-center gap-2 w-full sm:w-auto">
-                        <a href="https://instagram.com/tuntasinaja.my.id" target="_blank"
-                            class="group flex items-center gap-2.5 bg-white text-primary px-2xl py-3.5 rounded-full font-extrabold text-body-sm shadow-2xl hover:scale-105 active:scale-95 transition-all duration-200 w-full sm:w-auto justify-center">
-                            <span
-                                class="material-symbols-outlined text-lg group-hover:rotate-12 transition-transform duration-200"
-                                style="font-variation-settings: 'FILL' 1">photo_camera</span>
-                            Follow @tuntasinaja.my.id
-                            <span
-                                class="material-symbols-outlined text-base text-secondary group-hover:translate-x-1 transition-transform duration-200">arrow_forward</span>
-                        </a>
-                        <p class="text-white/50 text-[11px]">*Tunjukkan bukti follow saat konfirmasi order</p>
-                    </div>
-
                 </div>
             </div>
         </section>
@@ -1154,94 +1068,73 @@
             </div>
         </section>
 
-        <!-- Tentang Kami -->
-        <section class="py-3xl bg-surface-container-low" id="tentang">
-            <div class="max-w-container-max mx-auto px-gutter">
-                <div class="grid lg:grid-cols-2 gap-2xl items-center">
+        <!-- Social Follow Promo Banner -->
+        <section class="py-2xl bg-gradient-to-r from-[#004ac6] via-[#0071c2] to-[#0ea5e9] relative" id="promo">
+            <div class="max-w-container-max mx-auto px-gutter relative z-10">
+                <div class="flex flex-col items-center gap-lg text-center">
+
+                    <!-- Label Promo -->
+                    <div
+                        class="inline-flex items-center gap-1.5 bg-white/10 border border-white/25 px-3 py-1 rounded-full">
+                        <span class="material-symbols-outlined text-yellow-300 text-sm"
+                            style="font-variation-settings: 'FILL' 1">sell</span>
+                        <span class="text-white text-[11px] font-bold uppercase tracking-widest">Promo
+                            Berlangsung</span>
+                    </div>
+
+                    <!-- Heading -->
                     <div>
-                        <h2 class="text-label-caps font-label-caps text-primary mb-sm">TENTANG KAMI</h2>
-                        <h3 class="text-headline-md font-headline-md text-on-surface mb-lg">Dikelola Tim yang Paham
-                            Beban Tugas Mahasiswa & Pelajar</h3>
-                        <p class="text-body-md text-on-surface-variant mb-md leading-relaxed">Tuntasin dimulai dari
-                            keresahan yang sama dengan yang mungkin kamu rasakan sekarang: tugas menumpuk, deadline
-                            mepet, dan waktu yang tidak cukup. Sejak itu, kami fokus membantu pelajar, mahasiswa, dan
-                            pekerja menyelesaikan kebutuhan akademik maupun profesional dengan hasil yang rapi dan
-                            tepat waktu.</p>
-                        <p class="text-body-md text-on-surface-variant leading-relaxed">Selain jasa pengerjaan tugas,
-                            kami juga melayani pembuatan website siap pakai bagi yang butuh solusi digital
-                            dengan bujet terjangkau. Semua dikerjakan oleh tim internal kami sendiri — bukan
-                            broker atau pihak ketiga — supaya kualitas dan kerahasiaan data tetap terjaga.</p>
+                        <h3 class="text-white font-bold text-headline-sm leading-snug mb-2">
+                            Follow <span class="text-yellow-300">@tuntasinaja.my.id</span> &amp; Dapat Bonus!
+                        </h3>
+                        <p class="text-white/80 text-body-sm leading-relaxed max-w-lg mx-auto">
+                            Dapatkan <strong class="text-yellow-300">potongan harga 6%</strong> + <strong
+                                class="text-yellow-300">bonus 2x revisi gratis</strong> untuk setiap order — cukup
+                            follow akun
+                            Instagram kami &amp; tunjukkan bukti follow saat pesan.
+                        </p>
                     </div>
-                    <div class="grid grid-cols-2 gap-lg">
-                        <div class="bg-white rounded-2xl border border-outline-variant/30 p-lg text-center">
-                            <p class="text-display-lg-mobile font-display-lg-mobile text-primary">250+</p>
-                            <p class="text-body-sm text-on-surface-variant mt-1">Order Selesai</p>
-                        </div>
-                        <div class="bg-white rounded-2xl border border-outline-variant/30 p-lg text-center">
-                            <p class="text-display-lg-mobile font-display-lg-mobile text-primary">98%</p>
-                            <p class="text-body-sm text-on-surface-variant mt-1">Kepuasan Klien</p>
-                        </div>
-                        <div class="bg-white rounded-2xl border border-outline-variant/30 p-lg text-center">
-                            <p class="text-display-lg-mobile font-display-lg-mobile text-primary">24 Jam</p>
-                            <p class="text-body-sm text-on-surface-variant mt-1">Respons Cepat</p>
-                        </div>
-                        <div class="bg-white rounded-2xl border border-outline-variant/30 p-lg text-center">
-                            <p class="text-display-lg-mobile font-display-lg-mobile text-primary">1-3x</p>
-                            <p class="text-body-sm text-on-surface-variant mt-1">Revisi Gratis</p>
-                        </div>
+
+                    <!-- Benefit list -->
+                    <div
+                        class="flex flex-wrap justify-center items-center gap-x-4 gap-y-2 text-white/90 text-xs font-semibold">
+                        <span class="flex items-center gap-1.5">
+                            <span class="material-symbols-outlined text-yellow-300 text-base"
+                                style="font-variation-settings:'FILL' 1">check_circle</span>
+                            Diskon 6%
+                        </span>
+                        <span class="hidden sm:inline text-white/30">|</span>
+                        <span class="flex items-center gap-1.5">
+                            <span class="material-symbols-outlined text-yellow-300 text-base"
+                                style="font-variation-settings:'FILL' 1">check_circle</span>
+                            +2x Revisi Gratis
+                        </span>
+                        <span class="hidden sm:inline text-white/30">|</span>
+                        <span class="flex items-center gap-1.5">
+                            <span class="material-symbols-outlined text-yellow-300 text-base"
+                                style="font-variation-settings:'FILL' 1">check_circle</span>
+                            Berlaku Semua Layanan
+                        </span>
                     </div>
+
+                    <!-- CTA Button -->
+                    <div class="flex flex-col items-center gap-2 w-full sm:w-auto">
+                        <a href="https://instagram.com/tuntasinaja.my.id" target="_blank"
+                            class="group flex items-center gap-2.5 bg-white text-primary px-2xl py-3.5 rounded-full font-extrabold text-body-sm shadow-2xl hover:scale-105 active:scale-95 transition-all duration-200 w-full sm:w-auto justify-center">
+                            <span
+                                class="material-symbols-outlined text-lg group-hover:rotate-12 transition-transform duration-200"
+                                style="font-variation-settings: 'FILL' 1">photo_camera</span>
+                            Follow @tuntasinaja.my.id
+                            <span
+                                class="material-symbols-outlined text-base text-secondary group-hover:translate-x-1 transition-transform duration-200">arrow_forward</span>
+                        </a>
+                        <p class="text-white/50 text-[11px]">*Tunjukkan bukti follow saat konfirmasi order</p>
+                    </div>
+
                 </div>
             </div>
         </section>
 
-        <!-- Features (Keunggulan) -->
-        <section class="py-3xl">
-            <div class="max-w-container-max mx-auto px-gutter">
-                <div class="text-center mb-2xl">
-                    <h2 class="text-label-caps font-label-caps text-primary mb-sm">WHY CHOOSE US</h2>
-                    <h3 class="text-headline-md font-headline-md">Kenapa <span class="brand-tunta">Tunta</span><span
-                            class="brand-sin">sin</span> yang Terbaik?</h3>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-xl">
-                    <div class="p-xl bg-white border border-outline-variant/30 rounded-2xl card-hover-effect">
-                        <span class="material-symbols-outlined text-primary text-4xl mb-md">schedule</span>
-                        <h4 class="text-headline-sm font-bold mb-sm">Garansi Tepat Waktu</h4>
-                        <p class="text-body-sm text-on-surface-variant">Kami mengutamakan deadline. Tugas akan selesai
-                            sebelum atau tepat pada waktunya.</p>
-                    </div>
-                    <div class="p-xl bg-white border border-outline-variant/30 rounded-2xl card-hover-effect">
-                        <span class="material-symbols-outlined text-primary text-4xl mb-md">history_edu</span>
-                        <h4 class="text-headline-sm font-bold mb-sm">Revisi Gratis 1-3x</h4>
-                        <p class="text-body-sm text-on-surface-variant">Kurang puas? Kami berikan garansi 1-3 kali
-                            revisi gratis (tergantung jenis layanan) hingga hasil sesuai keinginan Anda.</p>
-                    </div>
-                    <div class="p-xl bg-white border border-outline-variant/30 rounded-2xl card-hover-effect">
-                        <span class="material-symbols-outlined text-primary text-4xl mb-md">support_agent</span>
-                        <h4 class="text-headline-sm font-bold mb-sm">Konsultasi Gratis</h4>
-                        <p class="text-body-sm text-on-surface-variant">Bingung dengan tugas Anda? Konsultasikan dulu
-                            kepada tim ahli kami tanpa biaya.</p>
-                    </div>
-                    <div class="p-xl bg-white border border-outline-variant/30 rounded-2xl card-hover-effect">
-                        <span class="material-symbols-outlined text-primary text-4xl mb-md">edit_document</span>
-                        <h4 class="text-headline-sm font-bold mb-sm">File Editable</h4>
-                        <p class="text-body-sm text-on-surface-variant">Semua file mentah (Word, PPT, Canva) diberikan
-                            sepenuhnya agar Anda bisa mengeditnya lagi.</p>
-                    </div>
-                    <div class="p-xl bg-white border border-outline-variant/30 rounded-2xl card-hover-effect">
-                        <span class="material-symbols-outlined text-primary text-4xl mb-md">lock</span>
-                        <h4 class="text-headline-sm font-bold mb-sm">Kerahasiaan Data</h4>
-                        <p class="text-body-sm text-on-surface-variant">Data pribadi dan detail tugas Anda terjamin aman
-                            dan tidak akan disebarkan.</p>
-                    </div>
-                    <div class="p-xl bg-white border border-outline-variant/30 rounded-2xl card-hover-effect">
-                        <span class="material-symbols-outlined text-primary text-4xl mb-md">bolt</span>
-                        <h4 class="text-headline-sm font-bold mb-sm">Fast Response</h4>
-                        <p class="text-body-sm text-on-surface-variant">Admin kami siap melayani pesanan dan pertanyaan
-                            Anda dengan cepat selama jam operasional.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
         <!-- Ordering Process -->
         <section class="py-3xl bg-surface-container-low" id="cara-pesan">
             <div class="max-w-container-max mx-auto px-gutter">
@@ -1317,6 +1210,94 @@
                 </div>
             </div>
         </section>
+        <!-- Features (Keunggulan) -->
+        <section class="py-3xl">
+            <div class="max-w-container-max mx-auto px-gutter">
+                <div class="text-center mb-2xl">
+                    <h2 class="text-label-caps font-label-caps text-primary mb-sm">WHY CHOOSE US</h2>
+                    <h3 class="text-headline-md font-headline-md">Kenapa <span class="brand-tunta">Tunta</span><span
+                            class="brand-sin">sin</span> yang Terbaik?</h3>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-xl">
+                    <div class="p-xl bg-white border border-outline-variant/30 rounded-2xl card-hover-effect">
+                        <span class="material-symbols-outlined text-primary text-4xl mb-md">schedule</span>
+                        <h4 class="text-headline-sm font-bold mb-sm">Garansi Tepat Waktu</h4>
+                        <p class="text-body-sm text-on-surface-variant">Kami mengutamakan deadline. Tugas akan selesai
+                            sebelum atau tepat pada waktunya.</p>
+                    </div>
+                    <div class="p-xl bg-white border border-outline-variant/30 rounded-2xl card-hover-effect">
+                        <span class="material-symbols-outlined text-primary text-4xl mb-md">history_edu</span>
+                        <h4 class="text-headline-sm font-bold mb-sm">Revisi Gratis 1-3x</h4>
+                        <p class="text-body-sm text-on-surface-variant">Kurang puas? Kami berikan garansi 1-3 kali
+                            revisi gratis (tergantung jenis layanan) hingga hasil sesuai keinginan Anda.</p>
+                    </div>
+                    <div class="p-xl bg-white border border-outline-variant/30 rounded-2xl card-hover-effect">
+                        <span class="material-symbols-outlined text-primary text-4xl mb-md">support_agent</span>
+                        <h4 class="text-headline-sm font-bold mb-sm">Konsultasi Gratis</h4>
+                        <p class="text-body-sm text-on-surface-variant">Bingung dengan tugas Anda? Konsultasikan dulu
+                            kepada tim ahli kami tanpa biaya.</p>
+                    </div>
+                    <div class="p-xl bg-white border border-outline-variant/30 rounded-2xl card-hover-effect">
+                        <span class="material-symbols-outlined text-primary text-4xl mb-md">edit_document</span>
+                        <h4 class="text-headline-sm font-bold mb-sm">File Editable</h4>
+                        <p class="text-body-sm text-on-surface-variant">Semua file mentah (Word, PPT, Canva) diberikan
+                            sepenuhnya agar Anda bisa mengeditnya lagi.</p>
+                    </div>
+                    <div class="p-xl bg-white border border-outline-variant/30 rounded-2xl card-hover-effect">
+                        <span class="material-symbols-outlined text-primary text-4xl mb-md">lock</span>
+                        <h4 class="text-headline-sm font-bold mb-sm">Kerahasiaan Data</h4>
+                        <p class="text-body-sm text-on-surface-variant">Data pribadi dan detail tugas Anda terjamin aman
+                            dan tidak akan disebarkan.</p>
+                    </div>
+                    <div class="p-xl bg-white border border-outline-variant/30 rounded-2xl card-hover-effect">
+                        <span class="material-symbols-outlined text-primary text-4xl mb-md">bolt</span>
+                        <h4 class="text-headline-sm font-bold mb-sm">Fast Response</h4>
+                        <p class="text-body-sm text-on-surface-variant">Admin kami siap melayani pesanan dan pertanyaan
+                            Anda dengan cepat selama jam operasional.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Tentang Kami -->
+        <section class="py-3xl bg-surface-container-low" id="tentang">
+            <div class="max-w-container-max mx-auto px-gutter">
+                <div class="grid lg:grid-cols-2 gap-2xl items-center">
+                    <div>
+                        <h2 class="text-label-caps font-label-caps text-primary mb-sm">TENTANG KAMI</h2>
+                        <h3 class="text-headline-md font-headline-md text-on-surface mb-lg">Dikelola Tim yang Paham
+                            Beban Tugas Mahasiswa & Pelajar</h3>
+                        <p class="text-body-md text-on-surface-variant mb-md leading-relaxed">Tuntasin dimulai dari
+                            keresahan yang sama dengan yang mungkin kamu rasakan sekarang: tugas menumpuk, deadline
+                            mepet, dan waktu yang tidak cukup. Sejak itu, kami fokus membantu pelajar, mahasiswa, dan
+                            pekerja menyelesaikan kebutuhan akademik maupun profesional dengan hasil yang rapi dan
+                            tepat waktu.</p>
+                        <p class="text-body-md text-on-surface-variant leading-relaxed">Selain jasa pengerjaan tugas,
+                            kami juga melayani pembuatan website siap pakai bagi yang butuh solusi digital
+                            dengan bujet terjangkau. Semua dikerjakan oleh tim internal kami sendiri — bukan
+                            broker atau pihak ketiga — supaya kualitas dan kerahasiaan data tetap terjaga.</p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-lg">
+                        <div class="bg-white rounded-2xl border border-outline-variant/30 p-lg text-center">
+                            <p class="text-display-lg-mobile font-display-lg-mobile text-primary">250+</p>
+                            <p class="text-body-sm text-on-surface-variant mt-1">Order Selesai</p>
+                        </div>
+                        <div class="bg-white rounded-2xl border border-outline-variant/30 p-lg text-center">
+                            <p class="text-display-lg-mobile font-display-lg-mobile text-primary">98%</p>
+                            <p class="text-body-sm text-on-surface-variant mt-1">Kepuasan Klien</p>
+                        </div>
+                        <div class="bg-white rounded-2xl border border-outline-variant/30 p-lg text-center">
+                            <p class="text-display-lg-mobile font-display-lg-mobile text-primary">24 Jam</p>
+                            <p class="text-body-sm text-on-surface-variant mt-1">Respons Cepat</p>
+                        </div>
+                        <div class="bg-white rounded-2xl border border-outline-variant/30 p-lg text-center">
+                            <p class="text-display-lg-mobile font-display-lg-mobile text-primary">1-3x</p>
+                            <p class="text-body-sm text-on-surface-variant mt-1">Revisi Gratis</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Testimonials -->
         <section class="py-3xl bg-surface" id="testimonials">
             <div class="max-w-container-max mx-auto px-gutter">
