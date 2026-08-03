@@ -362,10 +362,10 @@ const serviceDetails = {
     'paket-tugas-presentasi': {
         icon: 'auto_stories',
         title: 'Paket Tugas & Presentasi',
-        price: 'Rp 75rb (Hemat 17%)',
-        desc: 'Makalah + Slide PPT dengan tema desain senada, langsung siap dikumpulkan sekaligus dipresentasikan.',
+        price: 'Rp 95rb (Hemat 17%)',
+        desc: 'Makalah + 10 Slide PPT dengan tema desain senada, langsung siap dikumpulkan sekaligus dipresentasikan.',
         requirements: ['Topik atau judul makalah/presentasi', 'Jumlah halaman makalah & jumlah slide yang diinginkan', 'Format penulisan (misal APA/MLA) jika ada', 'Referensi wajib jika ada', 'Deadline pengumpulan'],
-        deliverables: ['File makalah lengkap (Word & PDF)', 'File PPT siap presentasi (PPTX & PDF)', 'Tema desain PPT senada dengan isi makalah', 'Bebas plagiarisme dengan cek similarity', 'Gratis 1x revisi minor'],
+        deliverables: ['File makalah lengkap (Word & PDF)', '10 slide PPT siap presentasi (PPTX & PDF)', 'Tema desain PPT senada dengan isi makalah', 'Bebas plagiarisme dengan cek similarity', 'Gratis 1x revisi minor'],
         wa: 'https://wa.me/628211474025?text=Halo%20Tuntasin%2C%20saya%20ingin%20konsultasi%20/%20memesan%20jasa%20%2APaket%20Tugas%20%26%20Presentasi%20Kuliah%2A.%0A%0ATerimakasih.'
     },
     'paket-sidang-pkl': {
