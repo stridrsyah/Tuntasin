@@ -13,10 +13,10 @@
     <link href="https://tuntasinaja.my.id/" rel="canonical">
 
     <!-- Favicon -->
-    <link rel="icon" href="/favicon.ico?v=2" type="image/x-icon">
-    <link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml">
-    <link rel="icon" href="/favicon-96x96.png?v=2" type="image/png" sizes="96x96">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2">
+    <link rel="icon" href="/favicon.ico?v=3" type="image/x-icon">
+    <link rel="icon" href="/favicon.svg?v=3" type="image/svg+xml">
+    <link rel="icon" href="/favicon-96x96.png?v=3" type="image/png" sizes="96x96">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=3">
 
     <!-- Open Graph -->
     <meta property="og:title" content="Tuntasin | Jasa Pengerjaan Tugas Akademik Profesional">
@@ -61,114 +61,22 @@
     "areaServed": "ID"
 }
 </script>
-    <!-- Fonts -->
+    <!-- Fonts (trimmed to weights actually used in the page: Hanken 600/700, Inter 400/600/700/800, JetBrains 500) -->
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
     <link
-        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap"
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700&amp;family=Inter:wght@400;600;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap"
         rel="stylesheet">
-    <!-- Material Symbols -->
+    <!-- Material Symbols: subset to only the 51 icons used on this page (icon_names),
+         and narrowed to the axis ranges actually used (wght 400, FILL 0..1) instead of
+         downloading the full multi-thousand-icon font at weights 100-700 -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0&amp;icon_names=alternate_email,arrow_back,arrow_forward,arrow_upward,article,auto_stories,badge,bar_chart,bolt,book,brush,business_center,chat,check_circle,checklist,close,co_present,contact_page,description,design_services,download_done,edit_document,edit_square,expand_more,folder_special,help,history_edu,home,info,location_on,lock,mail,menu,palette,payments,phone,photo_camera,quiz,redeem,rule,schedule,school,sell,share,slideshow,star,star_half,support_agent,verified,visibility,work_history&amp;display=swap"
         rel="stylesheet">
-    <!-- Tailwind -->
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "inverse-surface": "#213145",
-                        "on-secondary-container": "#fffbff",
-                        "surface-tint": "#0053db",
-                        "on-surface-variant": "#434655",
-                        "primary-fixed": "#dbe1ff",
-                        "secondary-fixed": "#dceefe",
-                        "surface-container-high": "#dce9ff",
-                        "on-tertiary-container": "#eef0ff",
-                        "primary": "#004ac6",
-                        "on-secondary-fixed-variant": "#075985",
-                        "on-primary": "#ffffff",
-                        "secondary-fixed-dim": "#7dd3fc",
-                        "error": "#ba1a1a",
-                        "on-primary-fixed-variant": "#003ea8",
-                        "tertiary-fixed": "#dae2fd",
-                        "on-surface": "#0b1c30",
-                        "on-background": "#0b1c30",
-                        "background": "#f8f9ff",
-                        "surface-container": "#e5eeff",
-                        "on-secondary": "#ffffff",
-                        "surface-bright": "#f8f9ff",
-                        "primary-fixed-dim": "#b4c5ff",
-                        "surface-variant": "#d3e4fe",
-                        "on-primary-container": "#eeefff",
-                        "outline-variant": "#c3c6d7",
-                        "outline": "#737686",
-                        "secondary-container": "#0ea5e9",
-                        "on-tertiary": "#ffffff",
-                        "surface-container-lowest": "#ffffff",
-                        "inverse-on-surface": "#eaf1ff",
-                        "surface": "#f8f9ff",
-                        "on-error": "#ffffff",
-                        "surface-dim": "#cbdbf5",
-                        "primary-container": "#2563eb",
-                        "tertiary-container": "#656d84",
-                        "error-container": "#ffdad6",
-                        "on-primary-fixed": "#00174b",
-                        "inverse-primary": "#b4c5ff",
-                        "surface-container-low": "#eff4ff",
-                        "surface-container-highest": "#d3e4fe",
-                        "on-tertiary-fixed": "#131b2e",
-                        "on-error-container": "#93000a",
-                        "tertiary": "#4d556b",
-                        "on-tertiary-fixed-variant": "#3f465c",
-                        "tertiary-fixed-dim": "#bec6e0",
-                        "secondary": "#0284c7",
-                        "on-secondary-fixed": "#0c4a6e"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                    "spacing": {
-                        "sm": "8px",
-                        "lg": "24px",
-                        "unit": "4px",
-                        "gutter": "24px",
-                        "md": "16px",
-                        "2xl": "48px",
-                        "container-max": "1280px",
-                        "xl": "32px",
-                        "xs": "4px",
-                        "3xl": "64px"
-                    },
-                    "fontFamily": {
-                        "body-sm": ["Inter"],
-                        "display-lg-mobile": ["Hanken Grotesk"],
-                        "body-lg": ["Inter"],
-                        "display-lg": ["Hanken Grotesk"],
-                        "body-md": ["Inter"],
-                        "headline-sm": ["Hanken Grotesk"],
-                        "headline-md": ["Hanken Grotesk"],
-                        "label-caps": ["JetBrains Mono"]
-                    },
-                    "fontSize": {
-                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
-                        "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
-                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
-                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
-                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
-                        "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
-                        "headline-md": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
-                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500" }]
-                    }
-                },
-            },
-        }
-    </script>
+    <!-- Tailwind: precompiled production build (replaces the cdn.tailwindcss.com
+         runtime script, which Tailwind's own docs say should not be used in
+         production because it generates all CSS via JS in the browser) -->
+    <link rel="stylesheet" href="css/tailwind.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -195,7 +103,7 @@
                 </a>
                 <!-- Menu Button (opens sidebar on all screen sizes) -->
                 <button id="hamburger-btn"
-                    class="flex items-center gap-2 p-2 md:pl-4 md:pr-3 rounded-lg hover:bg-surface-container transition-colors"
+                    class="flex items-center gap-2 min-w-11 min-h-11 justify-center p-2 md:pl-4 md:pr-3 rounded-lg hover:bg-surface-container transition-colors"
                     aria-label="Menu">
                     <span class="hidden md:inline text-on-surface font-semibold text-sm">Menu</span>
                     <span class="material-symbols-outlined text-on-surface" id="hamburger-icon">menu</span>
@@ -221,7 +129,7 @@
                         class="brand-tunta">Tunta</span><span class="brand-sin">sin</span></span>
             </div>
             <button id="sidebar-close-btn" aria-label="Tutup Menu"
-                class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-outline-variant/20 transition-all">
+                class="w-11 h-11 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-outline-variant/20 transition-all">
                 <span class="material-symbols-outlined">close</span>
             </button>
         </div>
@@ -305,7 +213,8 @@
                 </div>
                 <div class="relative animate-reveal reveal-visible delay-200 flex justify-center">
                     <img alt="Illustration of workspace with graduation cap and books"
-                        class="w-full max-w-sm md:max-w-full h-auto drop-shadow-2xl" src="img/ikon.png">
+                        class="w-full max-w-sm md:max-w-full h-auto drop-shadow-2xl" src="img/ikon.png" width="512"
+                        height="293" fetchpriority="high" decoding="async">
                     <!-- Floating Badge -->
                     <div class="absolute -bottom-4 left-4 md:-left-4 glass-panel p-2 md:p-md rounded-xl md:rounded-2xl border border-outline-variant/30 flex items-center gap-2 md:gap-md animate-bounce shadow-lg"
                         style="animation-duration: 3s">
@@ -1623,7 +1532,7 @@
                 Membantu Anda meraih prestasi tanpa stres berlebih.</p>
             <div class="flex gap-md">
                 <button onclick="copyLink()" title="Salin Link Website"
-                    class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary transition-colors relative group">
+                    class="w-11 h-11 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary transition-colors relative group">
                     <span class="material-symbols-outlined text-primary group-hover:text-white"
                         id="copy-icon">share</span>
                     <span
