@@ -2320,32 +2320,28 @@ input:where([type=file]):focus {
     }
 }
 
-/* ===========================
-   Tuntasin - Main Stylesheet
-   =========================== */
-
 .material-symbols-outlined {
-    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24
 }
 
 .glass-panel {
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, .7);
     backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px)
 }
 
 .dark .glass-panel {
-    background: rgba(30, 41, 59, 0.7);
+    background: rgba(30, 41, 59, .7)
 }
 
 .gradient-text {
-    background: linear-gradient(135deg, #004ac6 0%, #2E9CFE 100%);
+    background: linear-gradient(135deg, #004ac6 0, #2e9cfe 100%);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent
 }
 
 .hero-gradient {
-    background: radial-gradient(circle at 50% 50%, rgba(37, 99, 235, 0.05) 0%, transparent 70%);
+    background: radial-gradient(circle at 50% 50%, rgba(37, 99, 235, .05) 0, transparent 70%)
 }
 
 .step-line::after {
@@ -2356,128 +2352,105 @@ input:where([type=file]):focus {
     width: 100%;
     height: 2px;
     background: #e2e8f0;
-    z-index: -1;
+    z-index: -1
 }
 
-@media (max-width: 768px) {
+@media (max-width:768px) {
     .step-line::after {
-        display: none;
+        display: none
     }
 }
 
 .card-hover-effect {
-    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+    transition: transform .3s cubic-bezier(.34, 1.56, .64, 1), box-shadow .3s ease
 }
 
 .card-hover-effect:hover {
     transform: translateY(-8px);
-    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / .1), 0 8px 10px -6px rgb(0 0 0 / .1)
 }
 
 .animate-reveal {
     opacity: 0;
     transform: translateY(20px);
-    transition: all 0.6s ease-out;
+    transition: all .6s ease-out
 }
 
 .reveal-visible {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0)
 }
 
 .testimonial-track {
     display: flex;
     gap: 24px;
-    transition: transform 0.4s ease-in-out;
-    will-change: transform;
+    transition: transform .4s ease-in-out;
+    will-change: transform
 }
 
-/* Desktop: 3 card per view, kalkulasi tepat */
-@media (min-width: 769px) {
+@media (min-width:769px) {
     .testimonial-track>* {
-        min-width: calc((100% - 48px) / 3) !important;
-        max-width: calc((100% - 48px) / 3) !important;
+        min-width: calc((100% - 48px)/ 3) !important;
+        max-width: calc((100% - 48px)/ 3) !important;
         flex-shrink: 0;
-        box-sizing: border-box;
+        box-sizing: border-box
     }
 }
 
-/* Mobile: 1 card per view, full width */
-@media (max-width: 768px) {
+@media (max-width:768px) {
     .testimonial-track>* {
         min-width: 100% !important;
         max-width: 100% !important;
         flex-shrink: 0;
-        box-sizing: border-box;
+        box-sizing: border-box
     }
 }
 
-/* Mobile responsive improvements */
-@media (max-width: 640px) {
+@media (max-width:640px) {
     .hero-gradient {
         min-height: auto;
         padding-top: 2rem;
-        padding-bottom: 4rem;
+        padding-bottom: 4rem
     }
 
     section {
-        overflow-x: hidden;
+        overflow-x: hidden
     }
 }
 
-/* Fixed header is 72px tall; without this, clicking any anchor link
-   (sidebar menu, footer links, etc.) scrolls the target section flush
-   to the very top of the viewport, hiding it behind the fixed header. */
 html {
-    scroll-padding-top: 88px;
+    scroll-padding-top: 88px
 }
 
-/* Mobile sidebar uses Tailwind translate-x transition, no extra animation needed */
-
-/* Fix: on touch devices, Tailwind's hover: utilities apply as plain CSS :hover
-   (no built-in touch guard). Tapping a sidebar link triggers :hover and it stays
-   "stuck" on that link — it doesn't clear or move correctly when the page/sidebar
-   is scrolled or another link is tapped, since touch has no real mouseleave.
-   Disable the sidebar's hover-only styling on devices without real hover support,
-   and rely on :active for immediate, correctly-clearing tap feedback instead. */
-@media (hover: none),
-(pointer: coarse) {
+@media (hover:none),
+(pointer:coarse) {
     .mobile-nav-link:hover {
         background-color: transparent;
-        color: inherit;
+        color: inherit
     }
 
     .mobile-nav-link:active {
         background-color: #e5eeff;
-        /* matches Tailwind surface-container */
-        color: #004ac6;
-        /* matches Tailwind primary */
+        color: #004ac6
     }
 
     #hamburger-btn:hover,
     #sidebar-close-btn:hover {
-        background-color: transparent;
+        background-color: transparent
     }
 
     #hamburger-btn:active,
     #sidebar-close-btn:active {
-        background-color: #e5eeff;
-        /* matches Tailwind surface-container / outline-variant tint */
+        background-color: #e5eeff
     }
 }
 
-
-/* ===========================
-   Brand: Tuntasin Logo Colors
-   =========================== */
 .brand-tunta {
-    color: #1a2e5e;
-    /* biru tua / dongker */
+    color: #1a2e5e
 }
 
 .brand-sin {
-    color: #0A7CFF;
-    /* biru muda */
+    color: #0a7cff
 }
 
 .cta-button {
@@ -2487,18 +2460,14 @@ html {
     width: min(100%, 380px);
     margin: 0 auto;
     padding: 18px 24px;
-    text-align: center;
+    text-align: center
 }
 
-/* Hide scrollbar visually while keeping scroll functionality (used in service/paket detail modal) */
 .no-scrollbar {
     scrollbar-width: none;
-    /* Firefox */
-    -ms-overflow-style: none;
-    /* IE and Edge */
+    -ms-overflow-style: none
 }
 
 .no-scrollbar::-webkit-scrollbar {
-    display: none;
-    /* Chrome, Safari, Opera */
+    display: none
 }
