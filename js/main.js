@@ -245,8 +245,8 @@ const serviceDetails = {
     'makalah': {
         icon: 'description',
         title: 'Makalah / Artikel',
-        price: 'Mulai Rp 85rb',
-        desc: 'Penyusunan makalah sistematis dengan standar akademik tinggi, bebas plagiarisme, siap kumpul.',
+        price: 'Mulai Rp 50rb',
+        desc: 'Penyusunan makalah sistematis dengan standar akademik tinggi, bebas plagiarisme, siap kumpul. Cocok untuk pelajar SD, SMP, hingga SMA/SMK.',
         requirements: ['Topik atau judul makalah (boleh masih kasar/belum fix)', 'Jumlah halaman & format penulisan yang diminta (misal APA/MLA)', 'Referensi wajib jika ada (jurnal, buku, dsb)', 'Deadline pengumpulan'],
         deliverables: ['File makalah lengkap (Word & PDF)', 'Struktur akademik rapi: cover, BAB, daftar pustaka', 'Bebas plagiarisme dengan cek similarity', 'Gratis 1x revisi minor'],
         wa: 'https://wa.me/628211474025?text=Halo%20Tuntasin%2C%20saya%20ingin%20konsultasi%20/%20memesan%20jasa%20%2AMakalah%20/%20Artikel%2A.%0A%0ATerimakasih.'
@@ -254,16 +254,16 @@ const serviceDetails = {
     'laporan-pkl': {
         icon: 'business_center',
         title: 'Laporan PKL',
-        price: 'Mulai Rp 85rb',
-        desc: 'Dokumentasi praktik kerja profesional, terstruktur rapi, dan bergaransi revisi.',
-        requirements: ['Nama instansi/perusahaan tempat PKL', 'Referensi wajib jika ada', 'Data & catatan kegiatan selama praktik kerja', 'Jumlah halaman yang ditentukan', 'Format laporan dari institusi (jika ada template)', 'Deadline pengumpulan'],
-        deliverables: ['File laporan PKL lengkap (Word & PDF)', 'Analisis data & pembahasan kegiatan kerja', 'Layout profesional sesuai standar institusi', 'Gratis revisi jika ada bagian yang tidak sesuai'],
+        price: 'Mulai Rp 120rb',
+        desc: 'Spesialis Laporan PKL/Magang untuk siswa-siswi SMK — terstruktur rapi sesuai format sekolah, dari BAB 1 sampai lampiran, dan bergaransi revisi sampai siap sidang.',
+        requirements: ['Nama instansi/perusahaan tempat PKL', 'Format laporan dari sekolah (jika ada template/pedoman)', 'Data & catatan kegiatan selama praktik kerja (jurnal harian, dsb)', 'Jumlah halaman yang ditentukan sekolah', 'Deadline pengumpulan/sidang'],
+        deliverables: ['File laporan PKL lengkap sesuai format sekolah (Word & PDF)', 'BAB 1-5 + lampiran tersusun rapi', 'Analisis data & pembahasan kegiatan kerja', 'Layout profesional sesuai standar sekolah', 'Gratis revisi jika ada bagian yang tidak sesuai'],
         wa: 'https://wa.me/628211474025?text=Halo%20Tuntasin%2C%20saya%20ingin%20konsultasi%20/%20memesan%20jasa%20%2ALaporan%20PKL%2A.%0A%0ATerimakasih.'
     },
     'proposal': {
         icon: 'article',
         title: 'Proposal Penelitian',
-        price: 'Mulai Rp 85rb',
+        price: 'Mulai Rp 60rb',
         desc: 'Penyusunan proposal penelitian yang persuasif, logis, dan sesuai kaidah ilmiah.',
         requirements: ['Topik atau judul penelitian', 'Jumlah halaman yang diminta', 'Metodologi penelitian yang diinginkan (jika sudah punya arah)', 'Referensi wajib jika ada', 'Deadline pengumpulan'],
         deliverables: ['File proposal lengkap (Word & PDF)', 'Desain metodologi penelitian yang logis', 'Tinjauan pustaka relevan dan terkini', 'Gratis 1x revisi minor'],
@@ -272,7 +272,7 @@ const serviceDetails = {
     'resume-jurnal': {
         icon: 'book',
         title: 'Resume Jurnal',
-        price: 'Mulai Rp 45rb',
+        price: 'Mulai Rp 35rb',
         desc: 'Ringkasan poin-poin penting dari jurnal ilmiah nasional maupun internasional.',
         requirements: ['Judul atau link jurnal yang akan diringkas', 'Jumlah halaman ringkasan yang diinginkan', 'Format resume (jika ada ketentuan khusus)', 'Deadline pengumpulan'],
         deliverables: ['File resume jurnal (Word & PDF)', 'Analisis kritis terhadap isi jurnal', 'Ringkasan padat & mudah dipahami', 'Gratis 1x revisi minor'],
@@ -281,8 +281,8 @@ const serviceDetails = {
     'ppt': {
         icon: 'slideshow',
         title: 'Slide PPT / Presentasi',
-        price: 'Mulai Rp 3rb',
-        desc: 'Visualisasi ide yang memukau dan mudah dipahami untuk presentasi akademik.',
+        price: 'Mulai Rp 5rb/slide',
+        desc: 'Visualisasi ide yang memukau dan mudah dipahami untuk presentasi sekolah maupun sidang PKL.',
         requirements: ['Topik atau judul presentasi', 'Jumlah slide yang diinginkan', 'Isi materi/poin penting yang wajib ada', 'Referensi desain/tema (jika ada preferensi)', 'Deadline pengumpulan'],
         deliverables: ['File PPT siap presentasi (PPTX & PDF)', 'Desain modern & profesional', 'Catatan presenter di setiap slide', 'Gratis 1x revisi minor'],
         wa: 'https://wa.me/628211474025?text=Halo%20Tuntasin%2C%20saya%20ingin%20konsultasi%20/%20memesan%20jasa%20%2ASlide%20PPT%20/%20Presentasi%2A.%0A%0ATerimakasih.'
@@ -290,7 +290,7 @@ const serviceDetails = {
     'poster': {
         icon: 'palette',
         title: 'Poster / Desain Grafis',
-        price: 'Mulai Rp 25rb',
+        price: 'Mulai Rp 20rb',
         desc: 'Desain poster kreatif dan menarik untuk keperluan lomba atau publikasi ilmiah.',
         requirements: ['Tema atau konten yang ingin ditampilkan', 'Ukuran & format file yang dibutuhkan (A3, A4, digital, dll)', 'Logo/instansi terkait (jika perlu ditampilkan)', 'Referensi gaya desain (jika ada)', 'Deadline pengumpulan'],
         deliverables: ['File poster resolusi tinggi (JPG/PNG/PDF)', 'Desain siap cetak maupun digital', 'Layout menarik & sesuai tema', 'Gratis 1x revisi minor'],
@@ -299,7 +299,7 @@ const serviceDetails = {
     'infografis': {
         icon: 'bar_chart',
         title: 'Infografis',
-        price: 'Mulai Rp 25rb',
+        price: 'Mulai Rp 20rb',
         desc: 'Menyederhanakan data atau ide kompleks jadi visual yang ringkas dan mudah dicerna.',
         requirements: ['Topik atau data yang ingin divisualkan', 'Ukuran & format file yang dibutuhkan', 'Data mentah/statistik (jika ada)', 'Referensi gaya desain (jika ada)', 'Deadline pengumpulan'],
         deliverables: ['File infografis resolusi tinggi (JPG/PNG/PDF)', 'Data tersaji terstruktur & mudah dipahami', 'Desain menarik dan informatif', 'Gratis 1x revisi minor'],
@@ -308,8 +308,8 @@ const serviceDetails = {
     'cv-ats': {
         icon: 'badge',
         title: 'CV ATS',
-        price: 'Mulai Rp 25rb',
-        desc: 'CV yang dioptimalkan agar lolos sistem seleksi otomatis (ATS) perusahaan.',
+        price: 'Mulai Rp 20rb',
+        desc: 'CV yang dioptimalkan agar lolos sistem seleksi otomatis (ATS) perusahaan — cocok buat lamaran kerja setelah lulus SMK.',
         requirements: ['Posisi/bidang pekerjaan yang dituju', 'Riwayat pendidikan terakhir', 'Pengalaman kerja/organisasi (jika ada)', 'Skill & sertifikasi relevan', 'Deadline pengumpulan'],
         deliverables: ['File CV format ATS-friendly (Word & PDF)', 'Kata kunci dioptimalkan sesuai bidang', 'Struktur rapi & mudah dibaca sistem/HRD', 'Gratis 1x revisi minor'],
         wa: 'https://wa.me/628211474025?text=Halo%20Tuntasin%2C%20saya%20ingin%20konsultasi%20/%20memesan%20jasa%20%2ACV%20ATS%2A.%0A%0ATerimakasih.'
@@ -326,7 +326,7 @@ const serviceDetails = {
     'surat-lamaran': {
         icon: 'mail',
         title: 'Surat Lamaran Kerja',
-        price: 'Mulai Rp 25rb',
+        price: 'Mulai Rp 15rb',
         desc: 'Penulisan cover letter persuasif yang menonjolkan value diri di mata HR.',
         requirements: ['Posisi yang dilamar', 'Nama perusahaan tujuan', 'CV atau ringkasan pengalaman (agar isi surat relevan)', 'Deadline pengumpulan'],
         deliverables: ['File surat lamaran (Word & PDF)', 'Gaya bahasa persuasif dan profesional', 'Disesuaikan dengan posisi & perusahaan tujuan', 'Gratis 1x revisi minor'],
@@ -335,7 +335,7 @@ const serviceDetails = {
     'portofolio-akademik': {
         icon: 'folder_special',
         title: 'Portofolio Akademik',
-        price: 'Mulai Rp 85rb',
+        price: 'Mulai Rp 60rb',
         desc: 'Kumpulan karya dan pencapaian akademik disusun rapi dan siap dipresentasikan.',
         requirements: ['Cakupan isi portofolio (karya/prestasi apa saja)', 'Jumlah halaman yang diinginkan', 'File karya/dokumen pendukung yang ingin ditampilkan', 'Deadline pengumpulan'],
         deliverables: ['File portofolio lengkap (Word/PDF)', 'Desain profesional & rapi', 'Siap dipresentasikan ke dosen/perusahaan', 'Gratis 1x revisi minor'],
@@ -344,7 +344,7 @@ const serviceDetails = {
     'website-portofolio': {
         icon: 'badge',
         title: 'Website Portofolio',
-        price: 'Mulai Rp 150rb',
+        price: 'Mulai Rp 175rb',
         desc: 'Website portofolio online untuk menampilkan karya, CV, dan profil profesional kamu secara digital.',
         requirements: ['Isi/konten yang ingin ditampilkan (karya, CV, profil, dll)', 'Jumlah halaman website yang diinginkan', 'Preferensi warna/tema (jika ada)', 'Foto/logo pendukung (jika ada)', 'Deadline pengumpulan'],
         deliverables: ['Website portofolio online dan bisa diakses siapa saja', 'Desain personal branding yang menarik', 'Tampilan responsif di HP & laptop', 'Panduan singkat cara mengelola/update konten', 'Revisi hingga 2x'],
@@ -353,7 +353,7 @@ const serviceDetails = {
     'paket-lamaran-kerja': {
         icon: 'work_history',
         title: 'Paket Berkas Lamaran Kerja',
-        price: 'Rp 40rb (Hemat 20%)',
+        price: 'Rp 32rb (Hemat 20%)',
         desc: 'CV (ATS/Kreatif) + Surat Lamaran Kerja, langsung digabung jadi 1 file PDF siap kirim ke HRD. Mau gabungkan berkas lain juga (transkrip, sertifikat, ijazah, portofolio, dll)? Bisa sekalian, tinggal siapkan filenya. Lebih hemat dibanding pesan satu-satu.',
         requirements: ['Posisi/bidang pekerjaan yang dituju', 'Nama perusahaan tujuan', 'Pilihan gaya CV: ATS atau Kreatif', 'Riwayat pendidikan & pengalaman kerja/organisasi', 'Skill & sertifikasi relevan (jika ada)', 'File berkas lain yang ingin ikut digabung (transkrip, sertifikat, ijazah, portofolio, dll) — siapkan jika ingin semuanya jadi 1 file', 'Deadline pengumpulan'],
         deliverables: ['File CV (format ATS atau Kreatif sesuai pilihan)', 'File Surat Lamaran Kerja', '1 file PDF gabungan CV + Surat Lamaran (bisa ditambah berkas lain yang kamu siapkan), siap kirim ke HRD', 'File terpisah (Word) juga disediakan', 'Gratis 1x revisi minor'],
@@ -362,7 +362,7 @@ const serviceDetails = {
     'paket-tugas-presentasi': {
         icon: 'auto_stories',
         title: 'Paket Tugas & Presentasi',
-        price: 'Rp 95rb (Hemat 17%)',
+        price: 'Rp 80rb (Hemat 20%)',
         desc: 'Makalah + 10 Slide PPT dengan tema desain senada, langsung siap dikumpulkan sekaligus dipresentasikan.',
         requirements: ['Topik atau judul makalah/presentasi', 'Jumlah halaman makalah & jumlah slide yang diinginkan', 'Format penulisan (misal APA/MLA) jika ada', 'Referensi wajib jika ada', 'Deadline pengumpulan'],
         deliverables: ['File makalah lengkap (Word & PDF)', '10 slide PPT siap presentasi (PPTX & PDF)', 'Tema desain PPT senada dengan isi makalah', 'Bebas plagiarisme dengan cek similarity', 'Gratis 1x revisi minor'],
@@ -371,11 +371,20 @@ const serviceDetails = {
     'paket-sidang-pkl': {
         icon: 'co_present',
         title: 'Paket Sidang PKL Siap Tampil',
-        price: 'Rp 95rb (Hemat 17%)',
+        price: 'Rp 136rb (Hemat 20%)',
         desc: 'Laporan PKL + 10 Slide PPT untuk sidang/ujian, tema desain senada supaya presentasimu terlihat lebih rapi. Butuh lebih dari 10 slide? Bisa ditambah, tinggal chat dulu ya.',
         requirements: ['Nama instansi/perusahaan tempat PKL', 'Data & catatan kegiatan selama praktik kerja', 'Jumlah halaman laporan', 'Format laporan dari institusi (jika ada template)', 'Deadline pengumpulan'],
         deliverables: ['File laporan PKL lengkap (Word & PDF)', '10 Slide PPT untuk sidang/ujian PKL (PPTX & PDF)', 'Tema desain laporan & PPT senada', 'Layout profesional sesuai standar institusi', 'Gratis 1x revisi minor'],
         wa: 'https://wa.me/628211474025?text=Halo%20Tuntasin%2C%20saya%20ingin%20konsultasi%20/%20memesan%20jasa%20%2APaket%20Sidang%20PKL%20Siap%20Tampil%2A.%0A%0ATerimakasih.'
+    },
+    'paket-pkl-siap-kerja': {
+        icon: 'workspace_premium',
+        title: 'Paket Siap PKL & Kerja Lengkap',
+        price: 'Rp 164rb (Hemat 20%)',
+        desc: 'Paket paling lengkap untuk anak SMK: Laporan PKL + 10 Slide PPT sidang + CV ATS + Surat Lamaran Kerja. Beres administrasi sidang PKL sekaligus siap lamar kerja setelah lulus.',
+        requirements: ['Nama instansi/perusahaan tempat PKL', 'Data & catatan kegiatan selama praktik kerja', 'Format laporan dari sekolah (jika ada template)', 'Posisi/bidang pekerjaan yang ingin dilamar (untuk CV & surat lamaran)', 'Riwayat pendidikan & pengalaman (jika ada)', 'Deadline sidang/pengumpulan'],
+        deliverables: ['File Laporan PKL lengkap sesuai format sekolah (Word & PDF)', '10 Slide PPT untuk sidang PKL, tema senada dengan laporan', 'File CV ATS siap kirim ke HRD', 'File Surat Lamaran Kerja', 'Gratis 1x revisi tiap dokumen'],
+        wa: 'https://wa.me/628211474025?text=Halo%20Tuntasin%2C%20saya%20ingin%20konsultasi%20/%20memesan%20jasa%20%2APaket%20Siap%20PKL%20%26%20Kerja%20Lengkap%2A.%0A%0ATerimakasih.'
     },
 };
 
